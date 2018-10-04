@@ -12,21 +12,21 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="${root}/adminmenu/address/main.jsp">
+			<a href="${root}/adminmenu/calendar/main.jsp">
 				<i class="la la-calendar"></i>
 				<p>일정관리</p>
 				<span class="badge badge-count">14</span>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="${root}/adminmenu/calendar/main.jsp">
+			<a href="${root}/adminmenu/chart/main.jsp">
 				<i class="la la-bar-chart"></i>
 				<p>통계</p>
 				<span class="badge badge-count">50</span>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="${root}/adminmenu/sign/main.jsp">
+			<a href="${root}/adminmenu/commute/main.jsp">
 				<i class="la la-clock-o"></i>
 <!-- 				<i class="la la-file"></i> -->
 				<p>근태관리</p>
@@ -34,7 +34,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="${root}/adminmenu/commute/main.jsp">
+			<a href="${root}/adminmenu/group/main.jsp">
 				<i class="la la-sitemap"></i>
 				<p>조직도관리</p>
 				<span class="badge badge-success">3</span>
