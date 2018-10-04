@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.form-group{
+	margin:10px;
+}
+.mainform{
+	margin:20px;
+}
+.mainbox{
+	width:100%;
+	height:40px;
+/* 	padding:10px; */
+}
