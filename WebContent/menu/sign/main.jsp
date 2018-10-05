@@ -23,7 +23,7 @@
 									<div class="card-sub" style="width:80%;padding:20px;margin:0 10px;">
 										<table>
 										<tr>
-											<td>결재양식선택</td>
+											<td><h6>결재양식선택</h6></td>
 										</tr>
 										<tr>
 											<td>
