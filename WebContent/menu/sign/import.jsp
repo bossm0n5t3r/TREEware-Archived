@@ -35,7 +35,7 @@
 					zTree.expandNode(treeNode);
 					return false;
 				} else {
-					demoIframe.attr("src",treeNode.file + ".html");
+					demoIframe.attr("src",treeNode.file + ".jsp");
 					return true;
 				}
 			}
@@ -43,12 +43,15 @@
 	};
 
 	var zNodes = [
-		{id:1, pId:0, name:"전체보기", open:false},
-		{id:101, pId:1, name:"결재파일1", file:"test.jsp"},
-		{id:102, pId:1, name:"결재파일2", file:"core/standardData"},
-		{id:103, pId:1, name:"결재파일3", file:"core/standardData"},
-		{id:104, pId:1, name:"결재파일4", file:"core/standardData"},
-		{id:105, pId:1, name:"결재파일5", file:"core/standardData"},
+		
+		{id:999, pId:0, name:"전체보기", file:"list"},
+		
+		{id:1, pId:0, name:"즐겨찾기", open:true},
+		{id:101, pId:1, name:"결재파일1", file:"forms/test1"},
+		{id:102, pId:1, name:"결재파일2", file:"forms/test2"},
+		{id:103, pId:1, name:"결재파일3", file:"forms/test3"},
+		{id:104, pId:1, name:"결재파일4", file:"forms/test4"},
+		{id:105, pId:1, name:"결재파일5", file:"forms/test5"},
 
 		{id:2, pId:0, name:"점심뭐먹지", open:false},
 		{id:201, pId:2, name:"연차신청1", file:"excheck/checkbox"},
@@ -67,27 +70,6 @@
 		{id:402, pId:4, name:"즐거운", file:"bigdata/diy_async"},
 		{id:403, pId:4, name:"토요일", file:"bigdata/page"},
 
-// 		{id:5, pId:0, name:"Multi-functional", open:false},
-// 		{id:501, pId:5, name:"Freeze the Root Node", file:"super/oneroot"},
-// 		{id:502, pId:5, name:"Click to Expand Node", file:"super/oneclick"},
-// 		{id:503, pId:5, name:"Keep Single Path", file:"super/singlepath"},
-// 		{id:504, pId:5, name:"Adding Custom DOM", file:"super/diydom"},
-// 		{id:505, pId:5, name:"Checkbox / Radio Coexistence", file:"super/checkbox_radio"},
-// 		{id:506, pId:5, name:"Left Menu", file:"super/left_menu"},
-// 		{id:513, pId:5, name:"OutLook Style", file:"super/left_menuForOutLook"},
-//         {id:515, pId:5, name:"Awesome Style", file:"super/awesome"},
-//         {id:514, pId:5, name:"Metro Style", file:"super/metro"},
-// 		{id:507, pId:5, name:"Drop-down Menu", file:"super/select_menu"},
-// 		{id:509, pId:5, name:"Drop-down Menu with checkbox", file:"super/select_menu_checkbox"},
-// 		{id:510, pId:5, name:"Drop-down Menu with radio", file:"super/select_menu_radio"},
-// 		{id:508, pId:5, name:"Right-click Menu", file:"super/rightClickMenu"},
-// 		{id:511, pId:5, name:"Drag With Other DOMs", file:"super/dragWithOther"},
-// 		{id:512, pId:5, name:"Expand All Nodes with Async", file:"super/asyncForAll"},
-
-// 		{id:6, pId:0, name:"Other Extension Package", open:false},
-// 		{id:601, pId:6, name:"hide ordinary node", file:"exhide/common"},
-// 		{id:602, pId:6, name:"hide with checkbox mode", file:"exhide/checkbox"},
-// 		{id:603, pId:6, name:"hide with radio mode", file:"exhide/radio"}
 	];
 
 	$(document).ready(function(){
@@ -96,7 +78,7 @@
 		demoIframe = $("#testIframe");
 		demoIframe.bind("load", loadReady);
 		var zTree = $.fn.zTree.getZTreeObj("tree");
-		zTree.selectNode(zTree.getNodeByParam("id", 101));
+		zTree.selectNode(zTree.getNodeByParam("id", 999));
 	
 	});
 

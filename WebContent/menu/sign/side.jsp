@@ -14,7 +14,7 @@
 			<div class="info">
 				<a class="" data-toggle="collapse" href="#collapseMenu" aria-expanded="true" onmouseover="javascript:changecolor()">
 					<span style="height:30px;padding:5px">
-						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-edit"></i> 전자결재</span>
+						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-edit"></i>전자결재</span>
 				</a>
 				<div class="clearfix"></div>
 				<div class="collapse in" id="collapseMenu" aria-expanded="true" style="">
@@ -30,19 +30,29 @@
 			</div>
 		</div>
 		<ul class="nav">
+			<li class="nav-item">
+				<a href="${root}/pages/blank.jsp">
+					<p>새결재진행</p>
+				</a>
+			</li>
 			<li class="nav-item active">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
+					<p>문서목록</p>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
+					<p>결재진행상황</p>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
+					<p>지난결재확인</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root}/pages/blank.jsp">
+					<p>휴지통</p>
 				</a>
 			</li>
 		</ul>
