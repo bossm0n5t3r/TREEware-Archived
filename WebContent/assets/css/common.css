@@ -14,3 +14,9 @@
 .clear{
 	clear:both;
 }
+.li-sm{
+	margin:0 0 0 5px;
+}
+.li-lg{
+	margin:10px 0 2px 5px;
+}

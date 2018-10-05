@@ -15,6 +15,7 @@
 				<a class="" data-toggle="collapse" href="#collapseMenu" aria-expanded="true" onmouseover="javascript:changecolor()">
 					<span style="height:30px;padding:5px">
 						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-edit"></i>전자결재</span>
+					</span>
 				</a>
 				<div class="clearfix"></div>
 				<div class="collapse in" id="collapseMenu" aria-expanded="true" style="">
