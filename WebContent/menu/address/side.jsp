@@ -25,17 +25,27 @@
 		<ul class="nav">
 			<li class="nav-item active">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
+					<p>공용연락망</p>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
+					<p>부서내연락망</p>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
+					<p>외부연락망</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root}/pages/blank.jsp">
+					<p>등록하기</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root}/pages/blank.jsp">
+					<p>즐겨찾기</p>
 				</a>
 			</li>
 		</ul>

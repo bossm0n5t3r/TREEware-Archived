@@ -23,13 +23,15 @@
 									<div class="card-sub" style="width:80%;padding:20px;margin:0 10px;">
 										<table>
 										<tr>
-											<td>사내연락망</td>
+											<td><h6>공용연락망</h6></td>
 										</tr>
 										<tr>
 											<td>
 											<form>
-											
-											<input type="text" placeholder="검색어입력">
+												<div>
+													<div style="float:left;padding:10px 10px 0 0"><input type="text" placeholder="검색어입력"></div>
+													<div style="float:left;padding:10px 0 0 0"><input type="button" value="검색" style="font-size:70%;padding:4px 10px"></div>
+												</div>
 											</form>
 											</td>
 <!-- 										<td width="33%"><button type="button" class="btn btn-default btn-sm" style="width:100%">폴더추가</button></td> -->
@@ -38,82 +40,49 @@
 										</tr>
 										</table>
 										<div style="width:170px">
-										<hr><ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+										<hr><ul id="tree" class="ztree" style="width:100%;overflow:auto;"></ul>
 										</div>
 									</div>
 								</div>
 								<div class="col-md-9" style="padding:0 40px 0 0 ">
-								<!-- 결재서류 리스트 -->
-								<!-- <IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC=""></IFRAME> -->
-								 	<div class="buttonmenu" align="right" style="margin:0 0 10px 0">
-										<button type="button" class="btn btn-link">선택삭제</button>
-										<button type="button" class="btn btn-link">전체삭제</button>
-									</div>
-									<table id="listtable" style="width:100%;">
-										<thead>
-											<tr>
-												<th width="10%">
-													<div class="form-check" >
-														<label class="form-check-label">
-															<input class="form-check-input  select-all-checkbox" type="checkbox" data-select="checkbox" data-target=".task-select">
-															<span class="form-check-sign"></span>
-														</label>
-													</div>
-												</th>
-												<th width="15%">이름</th>
-												<th width="15%">휴대폰</th>
-												<th width="20%">이메일</th>
-												<th width="10%">부서</th>
-												<th width="10%">회사전화</th>
-												<th width="7%">그룹</th>
-												<th width="3%">수정삭제</th>
-											</tr>
-										</thead>
-										<tbody>
-											<% for(int i=0; i<10 ; i++){ %>
-											<tr>
-												<td>
-													<div class="form-check">
-														<label class="form-check-label">
-															<input class="form-check-input task-select" type="checkbox">
-															<span class="form-check-sign"></span>
-														</label>
-													</div>
-												</td>
-												<td>김하늘</td>
-												<td>010-0000-0000</td>
-												<td>skykim@gmail.com</td>
-												<td>영업1팀</td>
-												<td>070-777</td>
-												<td>프로젝트1</td>
-												<td class="td-actions text-left">
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
-															<i class="la la-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-															<i class="la la-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<%} %>
-										</tbody>
-									</table>
-								<!-- 결재서류 리스트 끝 -->
-								<br>
-									<div style="float:right">
-									<input type="text">
-									<ul class="pagination pagination-sm">
-									  <li><a href="#">1</a></li>
-									  <li><a href="#">2</a></li>
-									  <li><a href="#">3</a></li>
-									  <li><a href="#">4</a></li>
-									  <li><a href="#">5</a></li>
-									</ul>
-									</div>
-								<br>
-								<br>
+								<!-- 주소록 콘텐츠 페이지  -->
+								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME>
+								<!-- 주소록 콘텐츠 끝 -->
+								<br><br><br><hr><br>
+									<div class="clear"></div>
+									<div align="center">
+											<table style="width:230px">
+												<tr>
+													<td colspan="2">
+														<ul class="pagination pg-primary pg-small">
+															<li class="page-item">
+																<a class="page-link" href="#" aria-label="Previous">
+																	<span aria-hidden="true">&laquo;</span>
+																	<span class="sr-only">Previous</span>
+																</a>
+															</li>
+															<li class="page-item active"><a class="page-link" href="#">1</a></li>
+															<li class="page-item"><a class="page-link" href="#">2</a></li>
+															<li class="page-item"><a class="page-link" href="#">3</a></li>
+															<li class="page-item"><a class="page-link" href="#">4</a></li>
+															<li class="page-item"><a class="page-link" href="#">5</a></li>
+															<li class="page-item">
+																<a class="page-link" href="#" aria-label="Next">
+																	<span aria-hidden="true">&raquo;</span>
+																	<span class="sr-only">Next</span>
+																</a>
+															</li>
+														</ul>
+													</td>
+												</tr>
+												<tr><td colspan="2"></td></tr>
+												<tr>
+													<td><input type="text" style="width:100%"></td>
+													<td><input type="button" value="검색" style="font-size:70%;padding:5px 10px"></td>
+												</tr>
+											</table>
+										</div>
+									<br><br><br>
 							</div>
 						</div>
 					</div>

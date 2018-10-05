@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/common/import.jsp" %>
-<div class="buttonmenu" align="right" style="margin:0 0 10px 0">
-   <button type="button" class="btn btn-link">선택삭제</button>
-   <button type="button" class="btn btn-link">전체삭제</button>
+<div class="buttonmenu" align="right" style="margin:0 0 20px 0">
+	<button type="button" class="btn btn-primary">선택삭제</button>
+	<button type="button" class="btn btn-primary">전체삭제</button>
 </div>
 <table class="table-hover" id="listtable" style="width:100%;height:100%">
     <thead>
