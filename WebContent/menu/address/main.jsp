@@ -20,41 +20,29 @@
 					<div class="card-body">
 						<div class="row">
 								<div class="col-md-3">
-									<div class="card-sub" style="width:80%;padding:20px;margin:0 10px;">
-										<table>
-										<tr>
-											<td><h6>공용연락망</h6></td>
-										</tr>
-										<tr>
-											<td>
-											<form>
-												<div>
-													<div style="float:left;padding:10px 10px 0 0"><input type="text" placeholder="검색어입력"></div>
-													<div style="float:left;padding:10px 0 0 0"><input type="button" value="검색" style="font-size:70%;padding:4px 10px"></div>
-												</div>
-											</form>
-											</td>
-<!-- 										<td width="33%"><button type="button" class="btn btn-default btn-sm" style="width:100%">폴더추가</button></td> -->
-<!-- 										<td width="33%"><button type="button" class="btn btn-sm" style="width:100%">수정</button></td> -->
-<!-- 										<td width="33%"><button type="button" class="btn btn-sm" style="width:100%">삭제</button></td> -->
-										</tr>
-										</table>
+									<div class="card-sub">
 										<div style="width:170px">
+										<table style="width:100%">
+											<tr>
+												<td><input type="text" style="width:130px" placeholder="검색어입력"></td>
+												<td><input type="button" value="검색" style="font-size:70%;padding:4px 10px"></td>
+											</tr>
+										</table>
 										<hr><ul id="tree" class="ztree" style="width:100%;overflow:auto;"></ul>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-9" style="padding:0 40px 0 0 ">
+								<div class="col-md-9" style="padding:0 40px 0px 20px ">
 								<!-- 주소록 콘텐츠 페이지  -->
 								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME>
 								<!-- 주소록 콘텐츠 끝 -->
-								<br><br><br><hr><br>
+								<br><br><br>
 									<div class="clear"></div>
 									<div align="center">
 											<table style="width:230px">
 												<tr>
 													<td colspan="2">
-														<ul class="pagination pg-primary pg-small">
+														<ul class="pagination pg-default pg-small">
 															<li class="page-item">
 																<a class="page-link" href="#" aria-label="Previous">
 																	<span aria-hidden="true">&laquo;</span>

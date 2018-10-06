@@ -46,9 +46,9 @@
   }
   &.pg-default > li.active {
     > a, &:first-child > a, &:last-child > a, > span, &:first-child > span, &:last-child > span {
-      background: $default-color;
-      border-color: $default-color;
-      color: $white-color;
+      background: #eee;
+      border-color: #ccc;
+      color: #444;
     }
   }
 }
