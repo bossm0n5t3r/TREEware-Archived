@@ -12,7 +12,11 @@
 		<div class="main-panel">
 			<div class="content">
 				<div class="container-fluid" style="height:1100px">
-					내용을입력하세요.
+					<!-- 근태관리메인 -->
+					
+					내용을 넣어주세요
+					
+					<!-- 근태관리메인 끝 -->
 				</div>
 			</div>
 		<%@ include file="/common/footer.jsp" %>
