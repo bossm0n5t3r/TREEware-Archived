@@ -40,6 +40,16 @@
 					<p>사원등록</p>
 				</a>
 			</li>
+			<li class="nav-item">
+				<a href="${root}/adminmenu/account/view.jsp">
+					<p>상세페이지1)사원정보확인</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root}/adminmenu/account/edit.jsp">
+					<p>상세페이지2)사원정보수정</p>
+				</a>
+			</li>
 		</ul>
 	</div>
 </div>

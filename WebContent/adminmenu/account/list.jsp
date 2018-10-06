@@ -7,8 +7,7 @@
 			<h6>전체목록</h6>
 		</div>
 		<div style="width:40%;text-align:right">
-			<button class="simplebtn1">선택삭제</button>
-			<button class="simplebtn1">전체삭제</button>
+			<button class="simplebtn1">선택수정</button>
 		</div>
 	</div>
 </div>
@@ -29,7 +28,7 @@
 			<th width="10%">부서</th>
 			<th width="10%">직책</th>
 			<th width="15%">휴대전화</th>
-			<th width="3%">수정·삭제</th>
+			<th width="3%">수정</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -54,9 +53,9 @@
 					<button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link btn-simple-primary">
 						<i class="la la-edit"></i>
 					</button>
-					<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-						<i class="la la-times"></i>
-					</button>
+<!-- 					<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger"> -->
+<!-- 						<i class="la la-times"></i> -->
+<!-- 					</button> -->
 				</div>
 			</td>
 		</tr>
