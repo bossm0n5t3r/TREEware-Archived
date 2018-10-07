@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="wrapper">
-		<%@ include file="/common/top.jsp" %>
+		<%@ include file="/adminmenu/home/top.jsp" %>
 		<%@ include file="side.jsp" %>
 		<div class="main-panel">
 			<div class="content">

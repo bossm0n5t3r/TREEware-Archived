@@ -47,6 +47,13 @@
 				<span class="badge badge-danger">25</span>
 			</a>
 		</li>
+		<li class="nav-item">
+			<a href="${root}/adminmenu/board/main.jsp">
+				<i class="la la-edit"></i>
+				<p>게시판관리</p>
+				<span class="badge badge-danger">2</span>
+			</a>
+		</li>
 		<!-- <li class="nav-item update-pro">
 			<button  data-toggle="modal" data-target="#modalUpdate">
 				<i class="la la-hand-pointer-o"></i>

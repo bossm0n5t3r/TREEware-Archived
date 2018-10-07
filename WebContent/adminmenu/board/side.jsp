@@ -14,7 +14,7 @@
 			<div class="info">
 				<a class="" data-toggle="collapse" href="#collapseMenu" aria-expanded="true" onmouseover="javascript:changecolor()">
 					<span style="height:30px;padding:5px">
-						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-calendar"></i> 일정관리</span>
+						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-user"></i> 계정관리</span>
 				</a>
 				<div class="clearfix"></div>
 				<div class="collapse in" id="collapseMenu" aria-expanded="true" style="">
@@ -33,18 +33,23 @@
 		</div>
 		<ul class="nav">
 			<li class="nav-item active">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
+				<a href="${root}/adminmenu/board/main.jsp">
+					<p>게시판목록</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
+				<a href="${root}/adminmenu/board/register.jsp">
+					<p>게시판등록</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
+				<a href="${root}/adminmenu/board/view.jsp">
+					<p>공지사항 등록</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root}/adminmenu/board/edit.jsp">
+					<p>게시판 수정</p>
 				</a>
 			</li>
 		</ul>
