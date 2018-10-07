@@ -11,11 +11,21 @@
 		<%@ include file="side.jsp" %>
 		<div class="main-panel">
 			<div class="content">
-				<div class="container-fluid" style="height:1100px">
+				<div class="container-fluid">
 					<!-- 근태관리메인 -->
-					
-					내용을 넣어주세요
-					
+					<div class="row">
+						<div class="col-md-5">
+							<div>
+								<%@ include file="widget/clock.jsp" %>
+							</div>
+							<div>
+								<%@ include file="widget/stats.jsp" %>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<%@ include file="widget/worktime.jsp" %>
+						</div>
+					</div>
 					<!-- 근태관리메인 끝 -->
 				</div>
 			</div>
