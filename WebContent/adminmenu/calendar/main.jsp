@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="wrapper">
-		<%@ include file="/common/top.jsp" %>
+		<%@ include file="/adminmenu/home/top.jsp" %>
 		<%@ include file="side.jsp" %>
 		<div class="main-panel">
 			<div class="content">
@@ -15,7 +15,7 @@
 					내용을입력하세요.
 				</div>
 			</div>
-		<%@ include file="/common/footer.jsp" %>
+		<%@ include file="/adminmenu/home/top.jsp" %>
 		</div>
 	</div>
 </body>

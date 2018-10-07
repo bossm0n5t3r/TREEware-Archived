@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/adminmenu/group/import.jsp" %>
+<%@ include file="/adminmenu/board/import.jsp" %>
 </head>
 <body>
 	<div class="wrapper">
@@ -13,10 +13,11 @@
 		<div class="main-panel">
 			<div class="content">
 				<div class="container-fluid" style="height:1100px">
-									<div class="col-md-12">
+				
+				<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title">사원목록</div>
+						<div class="card-title">게시판목록</div>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -35,8 +36,7 @@
 								</div>
 								<div class="col-md-9" style="padding:0 20px ">
 								<!-- 주소록 콘텐츠 페이지  -->
-								<%@ include file="/adminmenu/group/edit-chart.jsp" %>
-<!-- 								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME> -->
+								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME>
 								<!-- 주소록 콘텐츠 끝 -->
 								<br><br><br><hr><br>
 									<div class="clear"></div>
@@ -78,6 +78,8 @@
 					</div>
 				</div>
 			</div>
+			
+				
 				</div>
 			</div>
 		<%@ include file="/common/footer.jsp" %>

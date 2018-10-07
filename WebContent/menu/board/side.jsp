@@ -16,8 +16,8 @@
 						<li><a href="${root}/menu/home/main.jsp"><span class="link-collapse"><i class="la la-home"> 메인화면</i></span></a></li>
 						<li><a href="${root}/menu/mail/main.jsp"><span class="link-collapse"><i class="la la-envelope"> 메일</i></span></a></li>
 						<li><a href="${root}/menu/address/main.jsp"><span class="link-collapse"><i class="la la-sitemap"> 주소록</i></span></a></li>
-						<li><a href="${root}/menu/calendar/main.jsp"><span class="link-collapse"><i class="la la-calendar"> 일정관리</i></span></a></li>
-						<li><a href="${root}/menu/commute/main.jsp"><span class="link-collapse"><i class="la la-clock-o"> 근태관리</i></span></a></li>
+						<li><a href="${root}/menu/calendar/main.jsp"><span class="link-collapse"><i class="la la-calendar"> 일정</i></span></a></li>
+						<li><a href="${root}/menu/commute/main.jsp"><span class="link-collapse"><i class="la la-clock-o"> 근태</i></span></a></li>
 						<li><a href="${root}/menu/board/main.jsp"><span class="link-collapse"><i class="la la-group"> 게시판</i></span></a></li>
 					</ul>
 				</div>
