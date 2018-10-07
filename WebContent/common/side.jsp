@@ -21,7 +21,7 @@
 		<li class="nav-item">
 			<a href="${root}/menu/calendar/main.jsp">
 				<i class="la la-calendar"></i>
-				<p>일정관리</p>
+				<p>일정</p>
 				<span class="badge badge-count">50</span>
 			</a>
 		</li>
@@ -36,7 +36,7 @@
 		<li class="nav-item">
 			<a href="${root}/menu/commute/main.jsp">
 				<i class="la la-clock-o"></i>
-				<p>근태관리</p>
+				<p>근태</p>
 				<span class="badge badge-success">3</span>
 			</a>
 		</li>
