@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="mc" class="com.treeware.member.controller.MemberController">
-		<property name="memberAction" ref="ma"/>
+		<property name="memberLoginAction" ref="mla"/>
 	</bean>
 	
-	<bean id="ma" class="com.treeware.member.action.MemberAction">
+	<bean id="mla" class="com.treeware.member.action.MemberLoginAction">
 		<property name="memberService" ref="ms"/>
 	</bean>
 	
