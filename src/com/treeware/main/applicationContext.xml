@@ -16,4 +16,21 @@
 	</bean>
 	
 	<bean id="md" class="com.treeware.member.dao.MemberDaoImpl"></bean>
+	
+	<bean id="mcna" class="com.treeware.admin.member.action.MemberCompareNumAction">
+		<property name="adminMemberService" ref="asi"/>
+	</bean>
+	
+	<bean id="mra" class="com.treeware.admin.member.action.MemberRegisterAction">
+		<property name="adminMemberService" ref="asi"/>
+	</bean>
+	
+	<bean id="asi" class="com.treeware.admin.member.service.MemberServiceImpl">
+	<property name="adminMemberDao" ref="adi"/>
+	</bean>
+	
+	<bean id="adi" class="com.treeware.admin.member.dao.MemberDaoImpl"></bean>
+	
 </beans>
+	
+	

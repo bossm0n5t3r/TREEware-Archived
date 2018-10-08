@@ -13,6 +13,15 @@
 	function goback(){
 		location.href="${root}/index.jsp";
 	}
+	$(document).ready(function (){
+		var dt = new Date();
+		var time = dt.getTime();
+		var empsq;
+		empsq = "TREE"+time;
+		document.getElementById("empnum").value = empsq;
+		document.getElementById("id").value = empsq;
+		document.getElementById("pw").value = "1234";
+	});
 	</script>
 </head>
 <body>
@@ -48,9 +57,10 @@
 												<label class="form-check-label">
 													<input class="form-check-input" type="checkbox" value="">
 													<span class="form-check-sign">
-														사원번호<input id="empnum" name="empnum"type="text" readonly="readonly" value="TREE200966222" style="width:140px;margin:0 10px">
+														사원번호<input id="empnum" name="empnum"type="text" readonly="readonly" value="" style="width:140px;margin:0 10px">
 													</span>
 												</label>
+												
 												<img src="${root}/assets/img/photo.jpg" width="100%" style="margin:5px 0px 10px 0px;padding:5px">
 												<input name="photo" id="photo" type="file" >
 											</div>
@@ -67,7 +77,7 @@
 															<div style="width:50%" class="box-group">
 																<table style="width:100%">
 																<tr>
-																	<td><input type="text" name="name" id="name" class="mainbox" style="border:0" placeholder="부서명을 선택하세요" required readonly="readonly"></td>
+																	<td><input type="text" name="dptname" id="dptname" class="mainbox" style="border:0" placeholder="부서명을 선택하세요" required readonly="readonly"></td>
 																	<td align="right">
 																		<input name="dept" id="dept" data-toggle="modal" data-target="#departments" class="btn btn-primary btn-sm" type="button" value="찾아보기">
 																	</td>

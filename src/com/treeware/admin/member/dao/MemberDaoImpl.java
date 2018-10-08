@@ -9,10 +9,10 @@ public class MemberDaoImpl implements MemberDao {
 	
 	@Override
 	public int compareMemberNum(String memberNum) {
-		int cnt = 1;
+		int cnt = 0;
 		SqlSession sqlSession = Configuration.getSqlSession();
 		try {
-			cnt = sqlSession.selectOne("com.kitri.member.dao.MemberDao.idCheck", memberNum);
+			cnt = sqlSession.selectOne("com.treeware.admin.member.dao.compareMemberNum", memberNum);
 		} finally {
 			sqlSession.close();
 		}
@@ -21,8 +21,14 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public void register(MemberDto memberDto) {
-		// TODO Auto-generated method stub
-
+		SqlSession sqlSession = Configuration.getSqlSession();
+		try {
+				sqlSession.insert("com.treeware.admin.member.dao.register", memberDto);
+		} finally {
+			sqlSession.close();
+		}
 	}
 
 }
+
+

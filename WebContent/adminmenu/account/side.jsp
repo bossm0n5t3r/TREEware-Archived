@@ -38,7 +38,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root}/adminmenu/account/register.jsp">
+				<a href="${root}/adminmember?act=mvregister">
 					<p>사원등록</p>
 				</a>
 			</li>
