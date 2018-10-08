@@ -1,5 +1,8 @@
 TREEware
 	- src
+		- main
+			- com.treeware.main
+				- applicationContext.xml
 		- config
 		- common
 		- util
