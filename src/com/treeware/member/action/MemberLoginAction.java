@@ -11,7 +11,7 @@ import com.treeware.action.Action;
 import com.treeware.member.model.EmpDto;
 import com.treeware.member.service.MemberService;
 
-public class MemberAction implements Action {
+public class MemberLoginAction implements Action {
 	private MemberService memberService;
 
 	public void setMemberService(MemberService memberService) {
