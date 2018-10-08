@@ -12,9 +12,12 @@ TREEware
 		- member
 		- schedule
 		- admin
+			- member
+				- com.treeware.admin.member.controller
+					- AdminMemberController.java (/adminmember)
+				
 			- board
 			- commute
-			- member
 			- form
 			- schedule
 			- organization
