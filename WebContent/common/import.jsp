@@ -32,7 +32,7 @@
 <script src="${root}/assets/js/plugin/chart-circle/circles.min.js"></script>
 <script src="${root}/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 <script src="${root}/assets/js/ready.min.js"></script>
-<script src="${root}/assets/js/index.js"></script>
+<%-- <script src="${root}/assets/js/index.js"></script> --%>
 <%-- <script src="${root}/assets/js/core/jquery.3.2.1.min.js"></script> --%>
 <%-- <script src="${root}/assets/js/core/popper.min.js"></script> --%>
 <%-- <script src="${root}/assets/js/core/bootstrap.min.js"></script> --%>
