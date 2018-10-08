@@ -7,7 +7,7 @@
 <mapper namespace="com.treeware.member.dao.MemberDao">
 	<select id="login" parameterType="java.util.Map" resultType="empDto">
 		SELECT EMP_SQ,PMS_SQ,DPT_SQ,RNK_SQ,PST_SQ,EMP_NM,EMP_ID,EMP_PW,EMP_SEX,EMP_BDATE,EMP_ML_ID,EMP_ML_ADDR,EMP_TEL1,EMP_TEL2,EMP_TEL3,EMP_ZIP,EMP_ADDR,EMP_ADDR_DT,EMP_BS_TEL1,EMP_BS_TEL2,EMP_BS_TEL3,EMP_REG,EMP_MOD,EMP_FNL_MOD,EMP_CRT 
-		FROM MEMBER
+		FROM EMP
 		WHERE
 		EMP_ID=#{id} and EMP_PW=#{pw}
 	</select>

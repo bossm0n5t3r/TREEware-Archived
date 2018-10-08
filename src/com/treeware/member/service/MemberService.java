@@ -2,6 +2,8 @@ package com.treeware.member.service;
 
 import java.util.Map;
 
+import com.treeware.member.model.EmpDto;
+
 public interface MemberService {
-	int login(Map<String, String> map);
+	EmpDto login(Map<String, String> map);
 }

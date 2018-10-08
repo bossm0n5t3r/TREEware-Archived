@@ -8,7 +8,8 @@
 	<%@ include file="/common/import.jsp" %>
 	<script>
 	function login(){
-		location.href="${root}/menu/home/main.jsp";
+		document.loginForm.action = "${root}/member";
+		document.loginForm.submit();
 	}
 	</script>
 </head>
@@ -16,9 +17,10 @@
 	<div align="center" style="padding:100px">
 	<div class="col-lg-4">
 			<h4>TREE WARE</h4><br>
-			<form class="login">
-				<div class="mainform"><input id="id" class="mainbox" type="text" placeholder="사원번호"></div>
-				<div class="mainform"><input id="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
+			<form class="login" name="loginForm" method="POST" action="">
+				<input type="hidden" name="act" value="login">
+				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" placeholder="사원번호"></div>
+				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
 				<div class="mainform">
 					<label class="form-check-label">
 						<input class="form-check-input" type="checkbox" value="">

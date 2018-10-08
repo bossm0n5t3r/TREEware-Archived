@@ -7,25 +7,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.treeware.action.Action;
+import com.treeware.member.action.MemberAction;
 import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
-@WebServlet("/MemberController")
+@WebServlet("/member")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Action memberAction;
-	
+	private ApplicationContext applicationContext;
+
 	public void setMemberAction(Action memberAction) {
 		this.memberAction = memberAction;
 	}
 
+	@Override
+	public void init() throws ServletException {
+		applicationContext = new ClassPathXmlApplicationContext("com/treeware/main/applicationContext.xml");
+		memberAction = applicationContext.getBean("ma", MemberAction.class);
+
+	}
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String root = request.getContextPath();
-
 		String act = request.getParameter("act");
+		System.out.println("MemberController act ==== " + act);
 
 		String path = "/index.jsp";
 
