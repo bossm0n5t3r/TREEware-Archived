@@ -33,18 +33,8 @@
 		</div>
 		<ul class="nav">
 			<li class="nav-item active">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
+				<a href="${root}/adminmenu/commute/main.jsp">
+					<p>근태관리</p>
 				</a>
 			</li>
 		</ul>

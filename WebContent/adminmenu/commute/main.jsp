@@ -12,7 +12,9 @@
 		<div class="main-panel">
 			<div class="content">
 				<div class="container-fluid" style="height:1100px">
-					내용을입력하세요.
+						<div class="col-md-12">
+							<%@ include file="worktime.jsp" %>
+						</div>
 				</div>
 			</div>
 		<%@ include file="/common/footer.jsp" %>
