@@ -1,4 +1,4 @@
-package com.treeware.admin.member.service;
+package com.treeware.member.service;
 
 public class MemberServiceImpl implements MemberService {
 
