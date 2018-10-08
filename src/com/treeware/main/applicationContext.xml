@@ -3,5 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+	<bean id="mc" class="com.treeware.member.controller.MemberController">
+		<property name="memberAction" ref="ma"/>
+	</bean>
+	
+	<bean id="ma" class="com.treeware.member.action.MemberAction">
+		<property name="memberService" ref="ms"/>
+	</bean>
+	
+	<bean id="ms" class="com.treeware.member.service.MemberServiceImpl">
+		<property name="memberDao" ref="md"/>
+	</bean>
+	
+	<bean id="md" class="com.treeware.member.dao.MemberDaoImpl"></bean>
 </beans>

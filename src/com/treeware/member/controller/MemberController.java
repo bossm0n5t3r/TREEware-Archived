@@ -7,17 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.treeware.member.service.MemberService;
+import com.treeware.action.Action;
+import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
 @WebServlet("/MemberController")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private MemberService memberSerivce;
-
-	public void setMemberSerivce(MemberService memberSerivce) {
-		this.memberSerivce = memberSerivce;
+	private Action memberAction;
+	
+	public void setMemberAction(Action memberAction) {
+		this.memberAction = memberAction;
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +30,8 @@ public class MemberController extends HttpServlet {
 		String path = "/index.jsp";
 
 		if ("login".equals(act)) {
-
+			path = memberAction.execute(request, response);
+			PageMove.forward(path, request, response);
 		} else if ("".equals(act)) {
 
 		} else if ("".equals(act)) {

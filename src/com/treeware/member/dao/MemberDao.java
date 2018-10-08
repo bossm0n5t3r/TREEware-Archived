@@ -1,5 +1,7 @@
 package com.treeware.member.dao;
 
-public interface MemberDao {
+import java.util.Map;
 
+public interface MemberDao {
+	int login(Map<String, String> map);
 }

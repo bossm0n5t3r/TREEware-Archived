@@ -1,5 +1,7 @@
 package com.treeware.member.service;
 
-public interface MemberService {
+import java.util.Map;
 
+public interface MemberService {
+	int login(Map<String, String> map);
 }
