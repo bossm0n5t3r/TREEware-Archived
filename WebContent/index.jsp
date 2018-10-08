@@ -23,7 +23,7 @@
 				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
 				<div class="mainform">
 					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+						<input class="form-check-input" name="autoLogin" type="checkbox" value="">
 						<span class="form-check-sign">현재 PC에서 자동로그인</span>
 					</label>
 				</div>
