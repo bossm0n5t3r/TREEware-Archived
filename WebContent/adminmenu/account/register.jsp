@@ -21,7 +21,7 @@
 		<%@ include file="side.jsp" %>
 		<div class="main-panel" >
 			<div class="content">
-				<div class="container-fluid" style="height:1000px">
+				<div class="container-fluid">
 					<div align="center" style="padding:10px">
 						<div class="col-md-12">
 							<!-- card -->
@@ -43,9 +43,8 @@
 									<!-- 사원등록1 -->
 									<br>
 									<form class="form" method="POST" name="registerMemberForm" action="">
-									<input type="hidden" name="act" value="registerMember">
 										<div class="row">
-											<div class="col-md-3" style="padding:0 20px 0 0">
+											<div class="col-md-2" style="padding:0 20px 0 0">
 												<label class="form-check-label">
 													<input class="form-check-input" type="checkbox" value="">
 													<span class="form-check-sign">
@@ -55,7 +54,7 @@
 												<img src="${root}/assets/img/photo.jpg" width="100%" style="margin:5px 0px 10px 0px;padding:5px">
 												<input name="photo" id="photo" type="file" >
 											</div>
-											<div class="col-md-9">
+											<div id="info" class="col-md-10">
 												<div class="row">
 													<div style="width:50%" class="box-group">
 														<input name="id" id="id" type="text"class="mainbox" placeholder="사용할 아이디" readonly="readonly">

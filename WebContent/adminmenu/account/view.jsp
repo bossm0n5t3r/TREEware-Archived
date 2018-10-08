@@ -27,14 +27,14 @@
 									<form class="form" method="POST" name="registerMemberForm" action="">
 									<input type="hidden" name="act" value="registerMember">
 										<div class="row" style="width:100%;padding:20px 20px 10px 20px;border-radius:8px;border:1px #ccc solid">
-											<div class="col-md-3" style="padding:0 20px 0 0">
+											<div class="col-md-2" style="padding:0 20px 0 0">
 												
 														사원번호<input id="empnum" name="empnum"type="text" readonly="readonly" value="TREE200966222" style="width:140px;margin:0 10px">
 													
 												<img src="${root}/assets/img/photo.jpg" width="100%" style="margin:5px 0px 10px 0px;padding:5px">
 											</div>
-											<div class="col-md-9">
-													<div class="row">
+											<div class="col-md-10">
+													<div id="info" class="row">
 														<div style="width:50%" class="box-group">
 															<input type="text" name="name" id="name" class="mainbox" style="border:0" placeholder="SW개발부 응용소프트웨어개발팀" readonly="readonly">
 														</div>
@@ -78,7 +78,7 @@
 															<input type="text" name="cell" id="cell" class="mainbox" placeholder="cellphone" required>
 														</div>
 														<div style="width:100%" class="box-group">
-															<input class="simplebtn1" type="button" value="정보수정하기" style="width:100%;padding:15px">
+															<input class="simplebtn1" type="button" value="정보수정하기" style="width:100%;padding:15px;background-color:#f2f3f8">
 														</div>
 													</div>
 												</div>
