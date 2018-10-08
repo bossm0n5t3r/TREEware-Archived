@@ -6,6 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%@ include file="/common/import.jsp" %>
+	<c:set var="id" value=""/>
+	<c:set var="loginCk" value=""/>
+	<c:set var="loop_flag" value="false"/>
+	<c:forEach var="cookie" items="${pageContext.request.cookies}">
+		<c:if test="${not loop_flag}">
+			<c:if test="${'LOGIN_ID' == cookie.name}">
+				<c:set var="id" value="${cookie.value}"/>
+				<c:set var="loginCk" value="checked"/>
+				<c:set var="loop_flag" value="true"/>
+			</c:if>
+		</c:if>
+	</c:forEach>
 	<script>
 	function login(){
 		document.loginForm.action = "${root}/member";
@@ -19,11 +31,11 @@
 			<h4>TREE WARE</h4><br>
 			<form class="login" name="loginForm" method="POST" action="">
 				<input type="hidden" name="act" value="login">
-				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" placeholder="사원번호"></div>
+				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" value="${id}" placeholder="사원번호"></div>
 				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
 				<div class="mainform">
 					<label class="form-check-label">
-						<input class="form-check-input" name="autoLogin" type="checkbox" value="">
+						<input class="form-check-input" name="autoLogin" value="loginOk" type="checkbox" value="" checked="${loginCk}">
 						<span class="form-check-sign">현재 PC에서 자동로그인</span>
 					</label>
 				</div>

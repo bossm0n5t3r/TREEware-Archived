@@ -21,6 +21,7 @@ public class MemberLoginAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String root = request.getContextPath();
 		String path = "/index.jsp";
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
@@ -30,6 +31,24 @@ public class MemberLoginAction implements Action {
 		map.put("pw", pw);
 		EmpDto empDto = memberService.login(map);
 		if (empDto != null) {
+			String loginOk = request.getParameter("autoLogin");
+			if ("loginOk".equals(loginOk)) {
+				Cookie cookie = new Cookie("LOGIN_ID", id);
+				cookie.setPath(root);
+				cookie.setMaxAge(60*60*24);
+				response.addCookie(cookie);
+			} else {
+				Cookie [] cookies = request.getCookies();
+				if (cookies != null) {
+					for (Cookie cookie : cookies) {
+						if ("LOGIN_ID".equals(cookie.getName())) {
+							cookie.setMaxAge(0);
+							response.addCookie(cookie);
+							break;
+						}
+					}
+				}
+			}
 			HttpSession session = request.getSession();
 			session.setAttribute("userInfo", empDto);
 			if ("TREE".equals(check)) {
