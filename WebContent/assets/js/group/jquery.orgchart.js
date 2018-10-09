@@ -87,9 +87,9 @@
       $chartContainer.append($chart);
 
       // append the export button
-      if (this.options.exportButton && !$chartContainer.find('.oc-export-btn').length) {
-        this.attachExportButton();
-      }
+//      if (this.options.exportButton && !$chartContainer.find('.oc-export-btn').length) {
+//        this.attachExportButton();
+//      }
 
       if (this.options.pan) {
         this.bindPan();
@@ -123,18 +123,18 @@
       mo.observe(this.$chartContainer[0], { childList: true });
     },
     //
-    attachExportButton: function () {
-      var that = this;
-      var $exportBtn = $('<button>', {
-        'class': 'oc-export-btn' + (this.options.chartClass !== '' ? ' ' + this.options.chartClass : ''),
-        'text': 'Export',
-        'click': function(e) {
-          e.preventDefault();
-          that.export();
-        }
-      });
-      this.$chartContainer.append($exportBtn);
-    },
+//    attachExportButton: function () {
+//      var that = this;
+//      var $exportBtn = $('<button>', {
+//        'class': 'oc-export-btn' + (this.options.chartClass !== '' ? ' ' + this.options.chartClass : ''),
+//        'text': 'Export',
+//        'click': function(e) {
+//          e.preventDefault();
+//          that.export();
+//        }
+//      });
+//      this.$chartContainer.append($exportBtn);
+//    },
     setOptions: function (opts, val) {
       if (typeof opts === 'string') {
         if (opts === 'pan') {
