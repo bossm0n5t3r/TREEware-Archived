@@ -32,28 +32,18 @@
 		</div>
 		<ul class="nav">
 			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
+				<a href="${root}/menu/sign/write.jsp">
 					<p>새결재진행</p>
 				</a>
 			</li>
 			<li class="nav-item active">
-				<a href="${root}/pages/blank.jsp">
-					<p>문서목록</p>
+				<a href="${root}/menu/sign/main.jsp">
+					<p>나의결재함</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>결재진행상황</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>지난결재확인</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>휴지통</p>
+				<a href="${root}/menu/sign/dept.jsp">
+					<p>부서결재함</p>
 				</a>
 			</li>
 		</ul>

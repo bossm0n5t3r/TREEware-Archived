@@ -16,7 +16,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title">나의결재함</div>
+						<div class="card-title">부서결재함</div>
 					</div>
 					<div class="card-body">
 						<div class="row">
