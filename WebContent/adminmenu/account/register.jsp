@@ -6,23 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%@ include file="/common/import.jsp" %>
-	<script>
-	function submit(){
-		 $("#successMsg").modal();
-	}
-	function goback(){
-		location.href="${root}/index.jsp";
-	}
-	$(document).ready(function (){
-		var dt = new Date();
-		var time = dt.getTime();
-		var empsq;
-		empsq = "TREE"+time;
-		document.getElementById("empnum").value = empsq;
-		document.getElementById("id").value = empsq;
-		document.getElementById("pw").value = "1234";
-	});
-	</script>
+<script src="${root}/assets/js/register.js"></script>	
 </head>
 <body>
 	<div class="wrapper">
@@ -51,7 +35,8 @@
 								<div class="card-body">
 									<!-- 사원등록1 -->
 									<br>
-									<form class="form" method="POST" name="registerMemberForm" action="">
+									<form class="form" method="POST" id="registerMemberForm" name="registerMemberForm" action="">
+									<input type="hidden" name="act" value="register">
 										<div class="row">
 											<div class="col-md-2" style="padding:0 20px 0 0">
 												<label class="form-check-label">
@@ -61,8 +46,8 @@
 													</span>
 												</label>
 												
-												<img src="${root}/assets/img/photo.jpg" width="100%" style="margin:5px 0px 10px 0px;padding:5px">
-												<input name="photo" id="photo" type="file" >
+												<img id="photoimg" height="300px" width="100%" style="margin:5px 0px 10px 0px;padding:5px">
+												<input name="photo" id="photo" type="file">
 											</div>
 											<div id="info" class="col-md-10">
 												<div class="row">
@@ -77,7 +62,10 @@
 															<div style="width:50%" class="box-group">
 																<table style="width:100%">
 																<tr>
-																	<td><input type="text" name="dptname" id="dptname" class="mainbox" style="border:0" placeholder="부서명을 선택하세요" required readonly="readonly"></td>
+																	<td><input type="text" name="dptname" id="dptname" class="mainbox" style="border:0" placeholder="부서명을 선택하세요" required readonly="readonly">
+																	<input type="hidden" id="dptcode" name="dptcode">
+																	</td>
+																	
 																	<td align="right">
 																		<input name="dept" id="dept" data-toggle="modal" data-target="#departments" class="btn btn-primary btn-sm" type="button" value="찾아보기">
 																	</td>
@@ -104,11 +92,14 @@
 																	<option value='4'>본부장</option>
 																</select>
 															</div>
-															<div style="width:35%" class="box-group">
-																<input name="name" id="name" type="text" class="mainbox" placeholder="이름" required>
+															<div style="width:20%" class="box-group">
+																<input name="empname" id="empname" type="text" class="mainbox" placeholder="이름" required>
 															</div>
-															<div style="width:35%" class="box-group">
-																<input name="birth" id="birth" type="text" class="mainbox" placeholder="생년월일 8자리" required>
+															<div style="width:25%" class="box-group">
+																<input name="cell" id="cell" type="text" class="mainbox" placeholder="휴대폰번호" onkeyup="inputCellPhone(this)" maxlength="13" required>
+															</div>
+															<div style="width:25%" class="box-group">
+																<input name="birth" id="birth" type="text" class="mainbox" placeholder="생년월일 8자리" onkeyup="" required>
 															</div>
 															<div style="width:15%" class="box-group">
 																<select id="gender" name="gender" class="form-control" style="font-size:100%" style="border:#007fff 1px solid;">
@@ -124,7 +115,7 @@
 																</select>
 															</div>
 															<div style="width:50%" class="box-group">
-																<input type="text" name="cell" id="cell" class="mainbox" placeholder="cellphone" required>
+																<input type="text" name="crtname" id="crtname" class="mainbox" placeholder="자격증" required>
 															</div>
 															<div style="width:25%" class="box-group">
 																<input type="text" name="joindate" id="joindate" class="mainbox" placeholder="입사일" required>
@@ -172,7 +163,7 @@
 				</div>
 			</div>
 		<%@ include file="/common/footer.jsp" %>
-		</div>
+		</div>1
 	</div>
 </body>
 </html>

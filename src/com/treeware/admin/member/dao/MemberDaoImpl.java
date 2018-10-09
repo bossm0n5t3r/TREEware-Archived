@@ -24,6 +24,7 @@ public class MemberDaoImpl implements MemberDao {
 		SqlSession sqlSession = Configuration.getSqlSession();
 		try {
 				sqlSession.insert("com.treeware.admin.member.dao.register", memberDto);
+				sqlSession.commit();
 		} finally {
 			sqlSession.close();
 		}

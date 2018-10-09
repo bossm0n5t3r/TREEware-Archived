@@ -18,4 +18,15 @@ public class MemberServiceImpl implements MemberService {
 		return memberDao.login(map);
 	}
 
+	@Override
+	public int modify(Map<String, String> map) {
+		System.out.println("modify시작");
+		return memberDao.modify(map);
+	}
+
+	@Override
+	public int idcheck(String id) {
+		return memberDao.idcheck(id);
+	}
+
 }

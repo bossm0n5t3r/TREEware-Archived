@@ -11,4 +11,16 @@
 		WHERE
 		EMP_ID=#{id} and EMP_PW=#{pw}
 	</select>
+	<update id="modify" parameterType="java.util.Map">
+		UPDATE EMP
+		SET EMP_ID = #{id}, EMP_PW = #{pw}
+		WHERE
+		EMP_SQ = #{empsq}
+	</update>
+	<select id="idcheck" parameterType="String" resultType="int">
+		SELECT COUNT(*) 
+		FROM EMP
+		WHERE
+		EMP_ID=#{id}
+	</select>
 </mapper>
