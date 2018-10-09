@@ -2,10 +2,10 @@ package com.treeware.admin.member.model;
 
 public class MemberDto {
 	private String emp_sq;
-	private String pms_sq;
-	private String dpt_sq;
-	private String rnk_sq;
-	private String pst_sq;
+	private int pms_sq;
+	private int dpt_sq;
+	private int rnk_sq;
+	private int pst_sq;
 	private String emp_nm;
 	private String emp_id;
 	private String emp_pw;
@@ -30,35 +30,35 @@ public class MemberDto {
 		this.emp_sq = emp_sq;
 	}
 
-	public String getPms_sq() {
+	public int getPms_sq() {
 		return pms_sq;
 	}
 
-	public void setPms_sq(String pms_sq) {
+	public void setPms_sq(int pms_sq) {
 		this.pms_sq = pms_sq;
 	}
 
-	public String getDpt_sq() {
+	public int getDpt_sq() {
 		return dpt_sq;
 	}
 
-	public void setDpt_sq(String dpt_sq) {
+	public void setDpt_sq(int dpt_sq) {
 		this.dpt_sq = dpt_sq;
 	}
 
-	public String getRnk_sq() {
+	public int getRnk_sq() {
 		return rnk_sq;
 	}
 
-	public void setRnk_sq(String rnk_sq) {
+	public void setRnk_sq(int rnk_sq) {
 		this.rnk_sq = rnk_sq;
 	}
 
-	public String getPst_sq() {
+	public int getPst_sq() {
 		return pst_sq;
 	}
 
-	public void setPst_sq(String pst_sq) {
+	public void setPst_sq(int pst_sq) {
 		this.pst_sq = pst_sq;
 	}
 

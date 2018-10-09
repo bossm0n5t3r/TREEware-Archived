@@ -22,6 +22,16 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public CmtDto getCommuteList(String EMP_SQ) {
 		return memberDao.getCommuteList(EMP_SQ);
+    }
+
+	public int modify(Map<String, String> map) {
+		System.out.println("modify시작");
+		return memberDao.modify(map);
+	}
+
+	@Override
+	public int idcheck(String id) {
+		return memberDao.idcheck(id);
 	}
 
 }

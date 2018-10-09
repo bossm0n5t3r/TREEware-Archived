@@ -12,6 +12,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.treeware.action.Action;
 import com.treeware.member.action.*;
+import com.treeware.member.action.MemberIdCheckAction;
+import com.treeware.member.action.MemberLoginAction;
+import com.treeware.member.action.MemberLogoutAction;
+import com.treeware.member.action.MemberModifyAction;
 import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
@@ -22,6 +26,8 @@ public class MemberController extends HttpServlet {
 	private Action memberLoginAction;
 	private Action memberLogoutAction;
 	private Action memberCommuteListAction;
+	private Action memberModifyAction;
+	private Action memberIdCheckAction;
 	private ApplicationContext applicationContext;
 
 	public void setMemberLoginAction(Action memberLoginAction) {
@@ -34,6 +40,14 @@ public class MemberController extends HttpServlet {
 
 	public void setMemberCommuteListAction(Action memberCommuteListAction) {
 		this.memberCommuteListAction = memberCommuteListAction;
+    }
+
+	public void setMemberModifyAction(Action memberModifyAction) {
+		this.memberModifyAction = memberModifyAction;
+	}
+
+	public void setMemberIdCheckAction(Action memberIdCheckAction) {
+		this.memberIdCheckAction = memberIdCheckAction;
 	}
 
 	@Override
@@ -42,6 +56,8 @@ public class MemberController extends HttpServlet {
 		memberLoginAction = applicationContext.getBean("mlia", MemberLoginAction.class);
 		memberLogoutAction = applicationContext.getBean("mloa", MemberLogoutAction.class);
 		memberCommuteListAction = applicationContext.getBean("mcla", MemberCommuteListAction.class);
+		memberModifyAction = applicationContext.getBean("mmfa", MemberModifyAction.class);
+		memberIdCheckAction = applicationContext.getBean("mica", MemberIdCheckAction.class);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -64,6 +80,11 @@ public class MemberController extends HttpServlet {
 			memberCommuteListAction.execute(request, response);
 		} else if ("".equals(act)) {
 
+		} else if ("modify".equals(act)) {
+			path = memberModifyAction.execute(request, response);
+			PageMove.redirect(path, request, response);
+		} else if ("idcheck".equals(act)) {
+			path = memberIdCheckAction.execute(request, response);
 		} else if ("".equals(act)) {
 
 		} else if ("".equals(act)) {

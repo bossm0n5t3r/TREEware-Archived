@@ -7,6 +7,8 @@
 		<property name="memberLoginAction" ref="mlia"/>
 		<property name="memberLogoutAction" ref="mloa"/>
 		<property name="memberCommuteListAction" ref="mcla"/>
+		<property name="memberModifyAction" ref="mmfa"/>
+		<property name="memberIdCheckAction" ref="mica"/>
 	</bean>
 	
 	<bean id="mlia" class="com.treeware.member.action.MemberLoginAction">
@@ -14,6 +16,14 @@
 	</bean>
 	
 	<bean id="mloa" class="com.treeware.member.action.MemberLogoutAction"/>
+
+	<bean id="mmfa" class="com.treeware.member.action.MemberModifyAction">
+		<property name="memberService" ref="ms"/>
+	</bean>
+	
+	<bean id="mica" class="com.treeware.member.action.MemberIdCheckAction">
+		<property name="memberService" ref="ms"/>
+	</bean>
 	
 	<bean id="mcla" class="com.treeware.member.action.MemberCommuteListAction">
 		<property name="memberService" ref="ms"/>

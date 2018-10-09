@@ -52,7 +52,7 @@ public class MemberLoginAction implements Action {
 			HttpSession session = request.getSession();
 			session.setAttribute("userInfo", empDto);
 			if ("TREE".equals(check)) {
-				path = "/adminmenu/account/edit.jsp";
+				path = "/membermodify.jsp";
 			} else {
 				int PMS_SQ = empDto.getPMS_SQ();
 				if (PMS_SQ == 1) {
