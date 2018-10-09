@@ -9,6 +9,7 @@
 
 	<typeAliases>
 		<typeAlias alias="empDto" type="com.treeware.member.model.EmpDto"/>
+		<typeAlias alias="cmtDto" type="com.treeware.member.model.CmtDto"/>
 		<typeAlias alias="memberDto" type="com.treeware.admin.member.model.MemberDto"/>
 	</typeAliases>
 		

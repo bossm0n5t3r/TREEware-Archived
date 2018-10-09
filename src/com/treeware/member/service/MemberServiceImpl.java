@@ -3,6 +3,7 @@ package com.treeware.member.service;
 import java.util.Map;
 
 import com.treeware.member.dao.MemberDao;
+import com.treeware.member.model.CmtDto;
 import com.treeware.member.model.EmpDto;
 
 public class MemberServiceImpl implements MemberService {
@@ -16,6 +17,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public EmpDto login(Map<String, String> map) {
 		return memberDao.login(map);
+	}
+
+	@Override
+	public CmtDto getCommuteList(String EMP_SQ) {
+		return memberDao.getCommuteList(EMP_SQ);
 	}
 
 }

@@ -11,4 +11,18 @@
 		WHERE
 		EMP_ID=#{id} and EMP_PW=#{pw}
 	</select>
+	
+	<select id="getCommuteList" parameterType="String" resultType="cmtDto">
+		SELECT COUNT(CMT_SQ) CMT_SQ
+			  ,COUNT(EMP_SQ) EMP_SQ
+			  ,COUNT(CMT_IP) CMT_IP
+			  ,COUNT(CMT_STR_TM) CMT_STR_TM
+			  ,COUNT(CMT_END_TM) CMT_END_TM
+			  ,COUNT(CMT_WOUT_TM) CMT_WOUT_TM
+			  ,COUNT(CMT_GOUT_TM) CMT_GOUT_TM
+			  ,COUNT(CMT_CB_TM) CMT_CB_TM
+			  ,COUNT(CMT_MSG) CMT_MSG
+		FROM CMT
+		WHERE EMP_SQ=#{EMP_SQ}
+	</select>
 </mapper>
