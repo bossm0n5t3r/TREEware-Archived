@@ -25,7 +25,8 @@ public class MemberLoginAction implements Action {
 		String path = "/index.jsp";
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String check = id.substring(0, 3);
+		String check = id.substring(0, 4);
+		System.out.println("MemberLoginAction check : " + check);
 		Map <String, String> map = new HashMap <String, String> ();
 		map.put("id", id);
 		map.put("pw", pw);
