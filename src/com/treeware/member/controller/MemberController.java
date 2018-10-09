@@ -11,8 +11,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.treeware.action.Action;
+import com.treeware.member.action.MemberIdCheckAction;
 import com.treeware.member.action.MemberLoginAction;
 import com.treeware.member.action.MemberLogoutAction;
+import com.treeware.member.action.MemberModifyAction;
 import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
@@ -22,6 +24,8 @@ public class MemberController extends HttpServlet {
 
 	private Action memberLoginAction;
 	private Action memberLogoutAction;
+	private Action memberModifyAction;
+	private Action memberIdCheckAction;
 	private ApplicationContext applicationContext;
 
 	public void setMemberLoginAction(Action memberLoginAction) {
@@ -32,11 +36,21 @@ public class MemberController extends HttpServlet {
 		this.memberLogoutAction = memberLogoutAction;
 	}
 
+	public void setMemberModifyAction(Action memberModifyAction) {
+		this.memberModifyAction = memberModifyAction;
+	}
+
+	public void setMemberIdCheckAction(Action memberIdCheckAction) {
+		this.memberIdCheckAction = memberIdCheckAction;
+	}
+
 	@Override
 	public void init() throws ServletException {
 		applicationContext = new ClassPathXmlApplicationContext("com/treeware/main/applicationContext.xml");
 		memberLoginAction = applicationContext.getBean("mlia", MemberLoginAction.class);
 		memberLogoutAction = applicationContext.getBean("mloa", MemberLogoutAction.class);
+		memberModifyAction = applicationContext.getBean("mmfa", MemberModifyAction.class);
+		memberIdCheckAction = applicationContext.getBean("mica", MemberIdCheckAction.class);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -55,10 +69,12 @@ public class MemberController extends HttpServlet {
 		} else if ("mvAskform".equals(act)) {
 			path = "/askform.jsp";
 			PageMove.redirect(path, request, response);
-		} else if ("".equals(act)) {
-
-		} else if ("".equals(act)) {
-
+		} else if ("modify".equals(act)) {
+			path = memberModifyAction.execute(request, response);
+			PageMove.redirect(path, request, response);
+		} else if ("idcheck".equals(act)) {
+			path = memberIdCheckAction.execute(request, response);
+			System.out.println("controller까지 왔다감");
 		} else if ("".equals(act)) {
 
 		} else if ("".equals(act)) {

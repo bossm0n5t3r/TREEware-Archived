@@ -21,4 +21,30 @@ public class MemberDaoImpl implements MemberDao {
 		return empDto;
 	}
 
+	@Override
+	public int modify(Map<String, String> map) {
+		int cnt = 0;
+		SqlSession sqlSession = Configuration.getSqlSession();
+		try {
+			sqlSession.update("com.treeware.member.dao.MemberDao.modify", map);
+			cnt = 1;
+			sqlSession.commit();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
+	@Override
+	public int idcheck(String id) {
+		int cnt = 1;
+		SqlSession sqlSession = Configuration.getSqlSession();
+		try {
+			cnt = sqlSession.selectOne("com.treeware.member.dao.MemberDao.idcheck", id);
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
 }

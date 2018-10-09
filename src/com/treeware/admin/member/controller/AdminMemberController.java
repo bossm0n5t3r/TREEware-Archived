@@ -32,7 +32,6 @@ public class AdminMemberController extends HttpServlet {
 
 		String act = request.getParameter("act");
 		
-		
 		String path = "/adminmenu/home/main.jsp";
 		
 		if ("mvregister".equals(act)) {

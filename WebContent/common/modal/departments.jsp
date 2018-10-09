@@ -5,17 +5,17 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h6 class="modal-title">부서검색</h6>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+				<button id="modalclose"type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
 			</div>
 			<div class="modal-body text-center" align="center">
 				<form>
 					<table style="width:100%">
 						<tr>
 							<td width="80%" style="padding:10px">
-								<input type="text" name="name" id="name" class="mainbox" placeholder="검색어를 입력하세요" style="padding:10px" required>
+								<input type="text" name="dptsearch" id="dptsearch" class="mainbox" placeholder="검색어를 입력하세요" style="padding:10px" required>
 							</td>
 							<td align="right" width="20%">
-								<input name="department" id="department" data-toggle="modal" data-target="#departments" style="width:100%;height:100%"class="btn btn-primary btn-sm" type="button" value="검색">
+								<input name="departmentname" id="departmentname" style="width:100%;height:100%"class="btn btn-primary btn-sm" type="button" value="검색">
 							</td>
 						</tr>
 					</table>
@@ -30,8 +30,8 @@
 					</thead>
 					<tbody style="margin:20px">
 						<%for(int i=0; i<8 ; i++){ %>
-						<tr>
-							<td>DD120</td>
+						<tr data-dismiss="modal" onclick="click_dpt(this)">
+							<td>1</td>
 							<td>경영개발1팀</td>
 						</tr>
 						<%} %>
@@ -44,3 +44,10 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+function click_dpt(dptname){
+    var td = $(dptname).children();
+	document.getElementById("dptcode").value = td.eq(0).text();
+	document.getElementById("dptname").value = td.eq(1).text();
+}
+</script>
