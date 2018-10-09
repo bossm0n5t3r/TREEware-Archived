@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.treeware.action.Action;
 import com.treeware.member.action.MemberLoginAction;
+import com.treeware.member.action.MemberLogoutAction;
 import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
@@ -20,16 +21,22 @@ public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Action memberLoginAction;
+	private Action memberLogoutAction;
 	private ApplicationContext applicationContext;
 
 	public void setMemberLoginAction(Action memberLoginAction) {
 		this.memberLoginAction = memberLoginAction;
 	}
 
+	public void setMemberLogoutAction(Action memberLogoutAction) {
+		this.memberLogoutAction = memberLogoutAction;
+	}
+
 	@Override
 	public void init() throws ServletException {
 		applicationContext = new ClassPathXmlApplicationContext("com/treeware/main/applicationContext.xml");
-		memberLoginAction = applicationContext.getBean("mla", MemberLoginAction.class);
+		memberLoginAction = applicationContext.getBean("mlia", MemberLoginAction.class);
+		memberLogoutAction = applicationContext.getBean("mloa", MemberLogoutAction.class);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +48,9 @@ public class MemberController extends HttpServlet {
 
 		if ("login".equals(act)) {
 			path = memberLoginAction.execute(request, response);
+			PageMove.forward(path, request, response);
+		} else if ("logout".equals(act)) {
+			path = memberLogoutAction.execute(request, response);
 			PageMove.forward(path, request, response);
 		} else if ("mvAskform".equals(act)) {
 			path = "/askform.jsp";
