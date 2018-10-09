@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<!-- Member 부분 -->
 	<bean id="mc" class="com.treeware.member.controller.MemberController">
 		<property name="memberLoginAction" ref="mlia"/>
 		<property name="memberLogoutAction" ref="mloa"/>
@@ -49,6 +50,10 @@
 	
 	<bean id="adi" class="com.treeware.admin.member.dao.MemberDaoImpl"></bean>
 	
+	<!-- Commute 부분 -->
+	<bean id="cc" class="com.treeware.commute.controller.CommuteController">
+	
+	</bean>
 </beans>
 	
 	

@@ -73,24 +73,36 @@ public class MemberController extends HttpServlet {
 		} else if ("logout".equals(act)) {
 			path = memberLogoutAction.execute(request, response);
 			PageMove.forward(path, request, response);
-		} else if ("mvAskform".equals(act)) {
-			path = "/askform.jsp";
-			PageMove.redirect(path, request, response);
-		} else if ("commuteList".equals(act)) {
-			memberCommuteListAction.execute(request, response);
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
+		} else if ("".equals(act)) {
+
 		} else if ("".equals(act)) {
 
 		} else if ("modify".equals(act)) {
 			path = memberModifyAction.execute(request, response);
 			PageMove.redirect(path, request, response);
+			
+		// AJAX 사용하는 부분
+		} else if ("commuteList".equals(act)) {
+			memberCommuteListAction.execute(request, response);
 		} else if ("idcheck".equals(act)) {
 			path = memberIdCheckAction.execute(request, response);
-		} else if ("".equals(act)) {
-
-		} else if ("".equals(act)) {
-
-		} else if ("".equals(act)) {
-
+			
+		// 페이지 이동하는 부분
+		} else if ("mvAskform".equals(act)) {
+			path = "/askform.jsp";
+			PageMove.redirect(path, request, response);
 		} else if ("".equals(act)) {
 
 		} else {

@@ -6,7 +6,7 @@
 	margin: 40px 0;
 }
 </style>
-<script>
+<script type="text/javascript">
 $(document).ready(function() {
 	$.ajax({
 		async: true
@@ -22,6 +22,10 @@ $(document).ready(function() {
 		}
 	})
 })
+
+function punchIn() {
+	document.location.href="${root}/commute?act=punchIn";
+}
 </script>
 <div class="card" align="center">
 	<div class="card-header">
@@ -29,7 +33,7 @@ $(document).ready(function() {
 	</div>
 	<div id="clockbtn" style="width: 80%; margin: 10px 0">
 		<ul class="nav nav-pills nav-justified">
-			<li class="nav-item"><a class="nav-link" href="#">출근하기</a></li>
+			<li class="nav-item"><a class="nav-link" href="javascript:punchIn();">출근하기</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">외근가기</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">복귀하기</a></li>
 			<li class="nav-item"><a class="nav-link active" href="#">퇴근하기</a>
