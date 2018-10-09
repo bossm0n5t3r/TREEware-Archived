@@ -11,7 +11,7 @@
 		 $("#successMsg").modal();
 	}
 	function goback(){
-		location.href="${root}/index.jsp";
+		location.href="${root}/member";
 	}
 	</script>
 </head>

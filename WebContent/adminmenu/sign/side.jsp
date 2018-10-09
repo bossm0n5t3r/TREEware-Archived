@@ -14,7 +14,7 @@
 			<div class="info">
 				<a class="" data-toggle="collapse" href="#collapseMenu" aria-expanded="true" onmouseover="javascript:changecolor()">
 					<span style="height:30px;padding:5px">
-						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-file-text"></i> 결재관리</span>
+						<span style="color:#1d7af3;font-size:110%;align:left"><i class="la la-user"></i> 계정관리</span>
 				</a>
 				<div class="clearfix"></div>
 				<div class="collapse in" id="collapseMenu" aria-expanded="true" style="">
@@ -33,18 +33,13 @@
 		</div>
 		<ul class="nav">
 			<li class="nav-item active">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
+				<a href="${root}/adminmenu/sign/main.jsp">
+					<p>결재관리</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
+				<a href="${root}/adminmenu/sign/register.jsp">
+					<p>양식관리</p>
 				</a>
 			</li>
 		</ul>

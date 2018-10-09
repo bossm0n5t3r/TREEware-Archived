@@ -1,5 +1,10 @@
 TREEware
 	- src
+		- action
+			- Action.java
+		- main
+			- com.treeware.main
+				- applicationContext.xml
 		- config
 		- common
 		- util
@@ -12,9 +17,12 @@ TREEware
 		- member
 		- schedule
 		- admin
+			- member
+				- com.treeware.admin.member.controller
+					- AdminMemberController.java (/adminmember)
+				
 			- board
 			- commute
-			- member
 			- form
 			- schedule
 			- organization

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.treeware.admin.member.dao">
+	<select id="compareMemberNum" parameterType="String" resultType="int">
+		SELECT  count(*)
+		FROM EMP
+		WHERE
+		EMP_SQ=#{memberNum}
+	</select>
+	<insert id="register" parameterType="com.treeware.admin.member.model.MemberDto">
+		INSERT INTO EMP (EMP_SQ, PMS_SQ, DPT_SQ, RNK_SQ, PST_SQ, EMP_NM, EMP_ID, EMP_PW, EMP_SEX,
+		EMP_BDATE, EMP_TEL1, EMP_TEL2, EMP_TEL3, EMP_ZIP, EMP_ADDR, EMP_ADDR_DT, EMP_BS_TEL1,
+		EMP_BS_TEL2, EMP_BS_TEL3, EMP_REG, EMP_FNL_MOD, EMP_CRT)
+		VALUES (#{EMP_SQ},#{PMS_SQ},#{DPT_SQ},#{RNK_SQ},#{PST_SQ},#{EMP_NM},#{EMP_ID},#{EMP_PW},
+		#{EMP_SEX},#{EMP_BDATE},#{EMP_TEL1},#{EMP_TEL2},#{EMP_TEL3},#{EMP_ZIP},#{EMP_ADDR},#{EMP_ADDR_DT},
+		#{EMP_BS_TEL1},#{EMP_BS_TEL2},#{EMP_BS_TEL3},#{EMP_REG},#{EMP_FNL_MOD},#{EMP_CRT})
+	</insert>
+</mapper>

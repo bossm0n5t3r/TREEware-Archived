@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mc" class="com.treeware.member.controller.MemberController">
+		<property name="memberLoginAction" ref="mlia"/>
+		<property name="memberLogoutAction" ref="mloa"/>
+	</bean>
+	
+	<bean id="mlia" class="com.treeware.member.action.MemberLoginAction">
+		<property name="memberService" ref="ms"/>
+	</bean>
+	
+	<bean id="mloa" class="com.treeware.member.action.MemberLogoutAction"/>
+	
+	<bean id="ms" class="com.treeware.member.service.MemberServiceImpl">
+		<property name="memberDao" ref="md"/>
+	</bean>
+	
+	<bean id="md" class="com.treeware.member.dao.MemberDaoImpl"></bean>
+	
+	<bean id="mcna" class="com.treeware.admin.member.action.MemberCompareNumAction">
+		<property name="adminMemberService" ref="asi"/>
+	</bean>
+	
+	<bean id="mra" class="com.treeware.admin.member.action.MemberRegisterAction">
+		<property name="adminMemberService" ref="asi"/>
+	</bean>
+	
+	<bean id="asi" class="com.treeware.admin.member.service.MemberServiceImpl">
+	<property name="adminMemberDao" ref="adi"/>
+	</bean>
+	
+	<bean id="adi" class="com.treeware.admin.member.dao.MemberDaoImpl"></bean>
+	
+</beans>
+	
+	
