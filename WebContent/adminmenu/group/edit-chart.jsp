@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<script>
+$(document).ready(function (){
+
+});
+</script>
 <!-- 조직도 상단바 -->
 <div id="edit-panel">
 	<div class="row">
 		<div id="chart-container" style="background-color:white;width:100%;padding:40px 0"></div>
-		<div class="col-md-12" style="margin:10px 0">
+		<div class="col-md-12" style="margin:10px 01">
 		<hr>
 		<br>
 			<table>
@@ -78,7 +83,7 @@
 		</div>
 	</div>
 	<p style="margin:15px 0 60px 0">
-	<button type="button" id="btn-add-nodes" class="btn btn-success">추가하기</button>
+	<button type="button" id="btn-add-nodes" class="btn btn-success" onclick="add_click()">추가하기</button>
 	<button type="button" id="btn-delete-nodes" class="btn btn-danger">삭제하기</button>
 	<button type="button" id="btn-reset" class="btn btn-warning">수정취소</button>
 	</p>

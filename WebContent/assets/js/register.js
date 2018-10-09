@@ -1,7 +1,7 @@
 function submit(){
 //		 $("#successMsg").modal();
 		 document.registerMemberForm.action = "/treeware/adminmember";
-//		 document.registerMemberForm.submit();
+		 document.registerMemberForm.submit();
 	}
 function goback(){
 		location.href="${root}/index.jsp";
