@@ -43,7 +43,8 @@ public class MemberController extends HttpServlet {
 			path = memberLoginAction.execute(request, response);
 			PageMove.forward(path, request, response);
 		} else if ("mvAskform".equals(act)) {
-
+			path = "/askform.jsp";
+			PageMove.redirect(path, request, response);
 		} else if ("".equals(act)) {
 
 		} else if ("".equals(act)) {

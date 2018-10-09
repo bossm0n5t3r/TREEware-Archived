@@ -36,14 +36,14 @@
 				<div class="mainform">
 					<label class="form-check-label">
 						<input class="form-check-input" name="autoLogin" value="loginOk" type="checkbox" value="" checked="${loginCk}">
-						<span class="form-check-sign">현재 PC에서 자동로그인</span>
+						<span class="form-check-sign">현재 PC에서 아이디저장</span>
 					</label>
 				</div>
 			</form>
 				<div class="mainform"><button class="btn btn-success" style="width:100%;height:60px" onclick="javascript:login()">로그인</button></div>
 				<div class="mainform">
 					<span class="txt1">비밀번호를 잊으셨나요?</span>
-					<a href="${root}/askform.jsp" class="txt2">관리자에게 문의해주세요</a>
+					<a href="${root}/member?act=mvAskform" class="txt2">관리자에게 문의해주세요</a>
 				</div>
 		</div>
 	</div>
