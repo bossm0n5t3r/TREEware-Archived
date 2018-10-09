@@ -35,8 +35,7 @@ public class MemberCommuteListAction implements Action {
 		commute.put("CMT_GOUT_TM", ("0".equals(cmtDto.getCMT_GOUT_TM())) ? "-" : cmtDto.getCMT_GOUT_TM());
 		commute.put("CMT_CB_TM", ("0".equals(cmtDto.getCMT_CB_TM())) ? "-" : cmtDto.getCMT_CB_TM());
 		response.getWriter().print(commute);
-		System.out.println(commute);
-		return "/menu/commute/widget/clock.jsp";
+		return null;
 	}
 
 }
