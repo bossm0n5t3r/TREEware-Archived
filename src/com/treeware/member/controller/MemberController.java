@@ -57,6 +57,8 @@ public class MemberController extends HttpServlet {
 
 		} else if ("".equals(act)) {
 
+		} else {
+			PageMove.redirect(path, request, response);
 		}
 	}
 
