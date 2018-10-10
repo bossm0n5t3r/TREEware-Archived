@@ -1,4 +1,4 @@
-package com.treeware.member.model;
+package com.treeware.commute.model;
 
 public class CmtDto {
 	private int CMT_SQ; // 출퇴근번호

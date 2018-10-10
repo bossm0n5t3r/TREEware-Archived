@@ -1,24 +1,23 @@
-package com.treeware.member.action;
+package com.treeware.commute.action;
 
 import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.treeware.action.Action;
-import com.treeware.member.model.CmtDto;
+import com.treeware.commute.model.CmtDto;
+import com.treeware.commute.service.CommuteService;
 import com.treeware.member.model.EmpDto;
-import com.treeware.member.service.MemberService;
 
-public class MemberCommuteListAction implements Action {
+public class CommuteGetCommuteAction implements Action {
 
-	private MemberService memberService;
+	private CommuteService commuteService;
 
-	public void setMemberService(MemberService memberService) {
-		this.memberService = memberService;
+	public void setCommuteService(CommuteService commuteService) {
+		this.commuteService = commuteService;
 	}
 
 	@Override
@@ -27,7 +26,7 @@ public class MemberCommuteListAction implements Action {
 		HttpSession session = request.getSession();
 		EmpDto empDto = (EmpDto) session.getAttribute("userInfo");
 		String EMP_SQ = empDto.getEMP_SQ();
-		CmtDto cmtDto = memberService.getCommuteList(EMP_SQ);
+		CmtDto cmtDto = commuteService.getCommute(EMP_SQ);
 		JSONObject commute = new JSONObject();
 		commute.put("CMT_SRT_TM", ("0".equals(cmtDto.getCMT_STR_TM())) ? "-" : cmtDto.getCMT_STR_TM());
 		commute.put("CMT_END_TM", ("0".equals(cmtDto.getCMT_END_TM())) ? "-" : cmtDto.getCMT_END_TM());

@@ -7,7 +7,6 @@
 	<bean id="mc" class="com.treeware.member.controller.MemberController">
 		<property name="memberLoginAction" ref="mlia"/>
 		<property name="memberLogoutAction" ref="mloa"/>
-		<property name="memberCommuteListAction" ref="mcla"/>
 		<property name="memberModifyAction" ref="mmfa"/>
 		<property name="memberIdCheckAction" ref="mica"/>
 	</bean>
@@ -23,10 +22,6 @@
 	</bean>
 	
 	<bean id="mica" class="com.treeware.member.action.MemberIdCheckAction">
-		<property name="memberService" ref="ms"/>
-	</bean>
-	
-	<bean id="mcla" class="com.treeware.member.action.MemberCommuteListAction">
 		<property name="memberService" ref="ms"/>
 	</bean>
 	
@@ -52,8 +47,18 @@
 	
 	<!-- Commute 부분 -->
 	<bean id="cc" class="com.treeware.commute.controller.CommuteController">
-	
+		<property name="commuteGetCommuteAction" ref="cgca"/>
 	</bean>
+	
+	<bean id="cgca" class="com.treeware.commute.action.CommuteGetCommuteAction">
+		<property name="commuteService" ref="cs"/>
+	</bean>
+	
+	<bean id="cs" class="com.treeware.commute.service.CommuteServiceImpl">
+		<property name="commuteDao" ref="cd"/>
+	</bean>
+	
+	<bean id="cd" class="com.treeware.commute.dao.CommuteDaoImpl"></bean>
 </beans>
 	
 	

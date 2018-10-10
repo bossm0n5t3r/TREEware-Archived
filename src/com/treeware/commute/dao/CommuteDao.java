@@ -1,5 +1,7 @@
 package com.treeware.commute.dao;
 
-public interface CommuteDao {
+import com.treeware.commute.model.CmtDto;
 
+public interface CommuteDao {
+	CmtDto getCommute(String EMP_SQ);
 }

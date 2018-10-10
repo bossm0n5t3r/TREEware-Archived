@@ -12,10 +12,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.treeware.action.Action;
 import com.treeware.member.action.*;
-import com.treeware.member.action.MemberIdCheckAction;
-import com.treeware.member.action.MemberLoginAction;
-import com.treeware.member.action.MemberLogoutAction;
-import com.treeware.member.action.MemberModifyAction;
 import com.treeware.util.PageMove;
 import com.treeware.util.TreewareConstance;
 
@@ -25,7 +21,6 @@ public class MemberController extends HttpServlet {
 
 	private Action memberLoginAction;
 	private Action memberLogoutAction;
-	private Action memberCommuteListAction;
 	private Action memberModifyAction;
 	private Action memberIdCheckAction;
 	private ApplicationContext applicationContext;
@@ -37,10 +32,6 @@ public class MemberController extends HttpServlet {
 	public void setMemberLogoutAction(Action memberLogoutAction) {
 		this.memberLogoutAction = memberLogoutAction;
 	}
-
-	public void setMemberCommuteListAction(Action memberCommuteListAction) {
-		this.memberCommuteListAction = memberCommuteListAction;
-    }
 
 	public void setMemberModifyAction(Action memberModifyAction) {
 		this.memberModifyAction = memberModifyAction;
@@ -55,7 +46,6 @@ public class MemberController extends HttpServlet {
 		applicationContext = new ClassPathXmlApplicationContext("com/treeware/main/applicationContext.xml");
 		memberLoginAction = applicationContext.getBean("mlia", MemberLoginAction.class);
 		memberLogoutAction = applicationContext.getBean("mloa", MemberLogoutAction.class);
-		memberCommuteListAction = applicationContext.getBean("mcla", MemberCommuteListAction.class);
 		memberModifyAction = applicationContext.getBean("mmfa", MemberModifyAction.class);
 		memberIdCheckAction = applicationContext.getBean("mica", MemberIdCheckAction.class);
 	}
@@ -94,8 +84,6 @@ public class MemberController extends HttpServlet {
 			PageMove.redirect(path, request, response);
 			
 		// AJAX 사용하는 부분
-		} else if ("commuteList".equals(act)) {
-			memberCommuteListAction.execute(request, response);
 		} else if ("idcheck".equals(act)) {
 			path = memberIdCheckAction.execute(request, response);
 			

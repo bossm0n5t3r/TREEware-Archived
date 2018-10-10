@@ -11,8 +11,8 @@ $(document).ready(function() {
 	$.ajax({
 		async: true
 		,type: 'GET'
-		,data: { act : 'commuteList'}
-		,url: '${root}/member'
+		,data: { act : 'getCommute'}
+		,url: '${root}/commute'
 		,success: function (rdata) {
 			var data = $.parseJSON(rdata);
 			$("#gtw").text(data.CMT_SRT_TM);

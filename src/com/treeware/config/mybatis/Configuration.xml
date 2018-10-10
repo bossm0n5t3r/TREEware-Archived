@@ -8,9 +8,11 @@
 	<properties resource="com/treeware/config/mybatis/dbinfo.properties"/>
 
 	<typeAliases>
+		<!-- Member 부분 -->
 		<typeAlias alias="empDto" type="com.treeware.member.model.EmpDto"/>
-		<typeAlias alias="cmtDto" type="com.treeware.member.model.CmtDto"/>
 		<typeAlias alias="memberDto" type="com.treeware.admin.member.model.MemberDto"/>
+		<!-- Commute 부분 -->
+		<typeAlias alias="cmtDto" type="com.treeware.commute.model.CmtDto"/>
 	</typeAliases>
 		
 
@@ -26,7 +28,10 @@
 		</environment>
 	</environments>
 	<mappers>
+		<!-- Member 부분 -->
 		<mapper resource="com/treeware/config/mybatis/member.xml" />
 		<mapper resource="com/treeware/config/mybatis/adminmember.xml" />
+		<!-- Commute 부분 -->
+		<mapper resource="com/treeware/config/mybatis/commute.xml" />
 	</mappers>
 </configuration>
