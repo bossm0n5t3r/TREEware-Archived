@@ -23,6 +23,11 @@
 		document.loginForm.action = "${root}/member";
 		document.loginForm.submit();
 	}
+	function enterkey() {
+        if (window.event.keyCode == 13) {
+             login();
+        }
+	}
 	</script>
 </head>
 <body>
@@ -32,7 +37,7 @@
 			<form class="login" name="loginForm" method="POST" action="">
 				<input type="hidden" name="act" value="login">
 				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" value="${id}" placeholder="사원번호"></div>
-				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
+				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호" onkeyup="enterkey()"></div>
 				<div class="mainform">
 					<label class="form-check-label">
 						<input class="form-check-input" name="autoLogin" value="loginOk" type="checkbox" value="" checked="${loginCk}">
