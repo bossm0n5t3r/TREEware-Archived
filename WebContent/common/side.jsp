@@ -29,7 +29,7 @@
 			<a href="${root}/menu/sign/main.jsp">
 				<i class="la la-edit"></i>
 <!-- 				<i class="la la-file"></i> -->
-				<p>전자결재</p>
+				<p>결재</p>
 				<span class="badge badge-count">6</span>
 			</a>
 		</li>

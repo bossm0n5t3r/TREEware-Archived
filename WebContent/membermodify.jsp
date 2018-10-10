@@ -57,12 +57,17 @@ function check_id(check){
 <body>
 	<div align="center" style="padding:100px">
 	<div class="col-lg-4">
-			<h4>TREE WARE</h4><br>
+			<h4>TREE WARE 계정설정</h4><br>
+			<p align="center">
+			사원번호로 로그인하셨습니다.<br>
+			아이디와 비밀번호를 설정하신 후<br>
+			다시 로그인 해주세요.
+			</p>
 			<form class="login" name="modifyForm" method="POST" action="">
 				<input type="hidden" name="act" value="modify">
-				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" onkeyup="check_id(this)" placeholder="아이디"></div>
+				<div class="mainform"><input id="id" name="id" class="mainbox" type="text" onkeyup="check_id(this)" placeholder="사용하실 아이디"></div>
 				<div class="mainform" align="left"><span id="id_check"></span></div>
-				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="비밀번호"></div>
+				<div class="mainform"><input id="pw" name="pw" class="mainbox" type="password" placeholder="사용하실 비밀번호"></div>
 			</form>
 				<div class="mainform"><button class="btn btn-success" style="width:100%;height:60px" onclick="modify()">수정하기</button></div>
 				<div class="mainform">

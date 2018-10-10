@@ -4,15 +4,15 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/menu/sign/import.jsp" %>
-<script type="text/javascript" src="${root}/assets/js/plugin/jquery-ztree/forms_ztree.js"></script>
+<%@ include file="/menu/address/import.jsp" %>
+<script type="text/javascript" src="${root}/assets/js/plugin/jquery-ztree/dept_ztree.js"></script>
 <script>
 $(document).ready(function(){
-	document.getElementById("menu1").setAttribute("class", "nav-item active");
+	document.getElementById("menu1").setAttribute("class", "nav-item");
 	document.getElementById("menu2").setAttribute("class", "nav-item");
 	document.getElementById("menu3").setAttribute("class", "nav-item");
 	document.getElementById("menu4").setAttribute("class", "nav-item");
-	document.getElementById("menu5").setAttribute("class", "nav-item");
+	document.getElementById("menu5").setAttribute("class", "nav-item active");
 });
 </script>
 </head>
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title">나의결재함</div>
+						<div class="card-title">즐겨찾기</div>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -44,7 +44,7 @@ $(document).ready(function(){
 								</div>
 								<div class="col-md-9" style="padding:0 40px 0px 20px ">
 								<!-- 주소록 콘텐츠 페이지  -->
-								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="iframe/list.jsp"></IFRAME>
+								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME>
 								<!-- 주소록 콘텐츠 끝 -->
 								<br><br><br>
 									<div class="clear"></div>
