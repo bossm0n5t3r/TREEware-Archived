@@ -15,6 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- INDEX.JSP -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -22,6 +23,7 @@
 <link rel="stylesheet" href="${root}/assets/css/common.css">
 <link rel="stylesheet" href="${root}/assets/css/demo.css">
 <link rel="stylesheet" href="${root}/assets/css/ready.css">
+
 
 <script src="${root}/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="${root}/assets/js/plugin/chartist/chartist.min.js"></script>
