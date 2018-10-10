@@ -5,8 +5,10 @@
 <head>
 <%@ include file="/common/import.jsp" %>
 <%@ include file="/menu/board/import.jsp" %>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+<link href="${root}/assets/js/plugin/summernote/summernote.css" rel="stylesheet">
+<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.10/summernote.css" rel="stylesheet"> -->
+<script src="${root}/assets/js/plugin/summernote/summernote.js"></script>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.10/summernote.js"></script> -->
 <script type="text/javascript">
 $(document).ready(function() {
     $('#summernote').summernote({
@@ -24,10 +26,14 @@ $(document).ready(function() {
       <%@ include file="side.jsp" %>
       <div class="main-panel">
          <div class="content">
+            <div class="card">
+				<div class="card-header">
             <form name="mailwriteform" action="" method="post">
                <div class="form-group">
                   <input name="act" type="hidden" value="mailwrite">
-                  <h5>메일쓰기</h5>
+                 <div class="card-title" style="margin-left: 15px">
+						메일쓰기 &nbsp;			
+								</div>
                   <div class="btn-group">
                   <button class="btn btn-info btn-sm">보내기</button>&nbsp;
                   <button class="btn btn-default btn-sm">미리보기</button>&nbsp;
