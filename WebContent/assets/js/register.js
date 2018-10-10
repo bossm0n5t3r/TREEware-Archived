@@ -1,7 +1,6 @@
 function submit(){
 //		 $("#successMsg").modal();
-		 document.registerMemberForm.action = "/treeware/adminmember";
-		 document.registerMemberForm.submit();
+		 register_check();
 	}
 function goback(){
 		location.href="${root}/index.jsp";
@@ -111,4 +110,31 @@ function unhypen(str) {
 //값 입력시 콤마찍기
 function inputCellPhone(obj) {
     obj.value = hypen(obj.value);
+}
+
+function search_zip(){
+	new daum.Postcode({
+	    oncomplete: function(data) {
+	    	console.log(data)
+	    	document.getElementById("address1").value = data.postcode;
+	    	document.getElementById("address2").value = data.address;
+	    }
+	}).open();
+}
+
+function register_check(){
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var email = document.getElementById('email').value;
+	if(document.getElementById("dptcode").value == ''){
+		alert("부서명을 입력하세요");
+	} else if(document.getElementById("empname").value == ''){
+		alert("이름을 입력하세요")
+	} else if(email == '' || !re.test(email)){
+		alert("올바른 이메일 주소를 입력하세요")
+	} else {
+		 document.registerMemberForm.action = "/treeware/adminmember";
+		 document.registerMemberForm.submit();
+		 alert("성공!!!");
+	}
+	
 }

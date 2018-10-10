@@ -29,12 +29,26 @@
 						</tr>
 					</thead>
 					<tbody style="margin:20px">
-						<%for(int i=0; i<8 ; i++){ %>
 						<tr data-dismiss="modal" onclick="click_dpt(this)">
 							<td>1</td>
-							<td>경영개발1팀</td>
+							<td>관리부</td>
 						</tr>
-						<%} %>
+						<tr data-dismiss="modal" onclick="click_dpt(this)">
+							<td>2</td>
+							<td>인사과</td>
+						</tr>
+						<tr data-dismiss="modal" onclick="click_dpt(this)">
+							<td>3</td>
+							<td>무역부</td>
+						</tr>
+						<tr data-dismiss="modal" onclick="click_dpt(this)">
+							<td>4</td>
+							<td>영업부</td>
+						</tr>
+						<tr data-dismiss="modal" onclick="click_dpt(this)">
+							<td>5</td>
+							<td>판매부</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
