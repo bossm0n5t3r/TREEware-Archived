@@ -7,3 +7,4 @@
 - [ ] Commute - src 부분에서 java 까지만, mybatis 부분은 파일 생성 x
 - [x] What is org.springframework.web.servlet.ModelAndView?
 - [ ] Spring MVC 적용하기!
+- [ ] Exception 만들기!
