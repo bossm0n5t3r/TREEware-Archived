@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%@ include file="/common/import.jsp" %>
-<script src="${root}/assets/js/register.js"></script>	
+<script src="${root}/assets/js/register.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>	
 </head>
 <body>
 	<div class="wrapper">
@@ -76,21 +77,23 @@
 															<div style="width:25%" class="box-group">
 																<select id="jw" name="jw" class="form-control" style="font-size:100%">
 																	<option value='0' disabled>직위선택</option>
-																	<option value='2'>사원</option>
-																	<option value='1'>인턴</option>
+																	<option value='1'>사원</option>
 																	<option value='2'>대리</option>
-																	<option value='4'>과장</option>
-																	<option value='5'>차장</option>
-																	<option value='6'>부장</option>
+																	<option value='3'>과장</option>
+																	<option value='4'>차장</option>
+																	<option value='5'>부장</option>
+																	<option value='6'>사장</option>
 																</select>
 															</div>
 															<div style="width:25%" class="box-group">
 																<select id="jc" name="jc" class="form-control" style="font-size:100%">
 																	<option value='0' disabled>직책선택</option>
 																	<option value='1'>팀원</option>
-																	<option value='2'>팀장</option>
-																	<option value='3'>파트장</option>
-																	<option value='4'>본부장</option>
+																	<option value='2'>파트장</option>
+																	<option value='3'>팀장</option>
+																	<option value='4'>실장</option>
+																	<option value='5'>본부장</option>
+																	<option value='6'>사업부장</option>
 																</select>
 															</div>
 															<div style="width:20%" class="box-group">
@@ -111,18 +114,12 @@
 															</div>
 															<div style="width:15%" class="box-group">
 																<select id="power" name="power" class="form-control" style="font-size:100%">
-																	<option value='0'>일반</option>
-																	<option value='1'>관리자권한</option>
+																	<option value='1'>일반</option>
+																	<option value='2'>관리자권한</option>
 																</select>
 															</div>
-															<div style="width:50%" class="box-group">
+															<div style="width:100%" class="box-group">
 																<input type="text" name="crtname" id="crtname" class="mainbox" placeholder="자격증" required>
-															</div>
-															<div style="width:25%" class="box-group">
-																<input type="text" name="joindate" id="joindate" class="mainbox" placeholder="입사일" required>
-															</div>
-															<div style="width:25%" class="box-group">
-																<input type="text" name="resigndate" id="resigndate" class="mainbox" placeholder="퇴사일" required>
 															</div>
 														</div>
 													</div>
@@ -134,13 +131,13 @@
 																	<input type="text" name="address2" id="address2" class="mainbox" style="border:0" placeholder="우편번호를 검색하세요">
 																</td>
 																<td align="right">
-																	<input name="findzip" id="findzip" data-toggle="modal" data-target="#zipcode" class="btn btn-default btn-sm" type="button" value="찾아보기">
+																	<input name="findzip" id="findzip" onclick="search_zip()" class="btn btn-default btn-sm" type="button" value="찾아보기">
 																</td>
 															</tr>
 														</table>
 													</div>
 													<div style="width:50%" class="box-group"><input type="text" name="address3" id="address3" class="mainbox" placeholder="상세주소를 입력하세요"></div>
-													<div style="width:50%" class="box-group"><input type="text" name="email" id="email" class="mainbox" placeholder="이메일" readonly="readonly"></div>
+													<div style="width:50%" class="box-group"><input type="text" name="email" id="email" class="mainbox" placeholder="이메일"></div>
 													<div style="width:50%" class="box-group"><input type="text" name="phone" id="phone" class="mainbox" placeholder="내선번호" required></div>
 													<div id="idAlert" class="spanalert" style="color:#ffd001;margin: 0 0 20px 0;width:100%"></div></div>
 												</div>
@@ -151,9 +148,9 @@
 							</div>
 							<!-- card end -->
 							<div class="card-action" style="text-align:center">
-								<button class="btn btn-default" onclick="javascript:submit()" style="width:120px;padding:10px;margin:5px">입력추가</button>
-								<button class="btn btn-default" onclick="javascript:submit()" style="width:120px;padding:10px;margin:5px">선택삭제</button>
-								<button class="btn btn-success" onclick="javascript:submit()" style="width:120px;padding:10px;margin:5px">전송하기</button>
+								<button class="btn btn-default" onclick="" style="width:120px;padding:10px;margin:5px">입력추가</button>
+								<button class="btn btn-default" onclick="" style="width:120px;padding:10px;margin:5px">선택삭제</button>
+								<button class="btn btn-success" onclick="javascript:submit()" style="width:120px;padding:10px;margin:5px">등록하기</button>
 								<button class="btn btn-danger" onclick="javascript:goback()" style="width:120px;padding:10px;margin:5px">작성취소</button>
 							</div>
 							<!-- register form end-->
