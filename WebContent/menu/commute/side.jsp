@@ -31,22 +31,22 @@
 				</div>
 			</div>
 		</div>
-		<ul class="nav">
-			<li class="nav-item active">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴1</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴2</p>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="${root}/pages/blank.jsp">
-					<p>상세메뉴3</p>
-				</a>
-			</li>
-		</ul>
+<!-- 		<ul class="nav"> -->
+<!-- 			<li class="nav-item active"> -->
+<%-- 				<a href="${root}/pages/blank.jsp"> --%>
+<!-- 					<p>상세메뉴1</p> -->
+<!-- 				</a> -->
+<!-- 			</li> -->
+<!-- 			<li class="nav-item"> -->
+<%-- 				<a href="${root}/pages/blank.jsp"> --%>
+<!-- 					<p>상세메뉴2</p> -->
+<!-- 				</a> -->
+<!-- 			</li> -->
+<!-- 			<li class="nav-item"> -->
+<%-- 				<a href="${root}/pages/blank.jsp"> --%>
+<!-- 					<p>상세메뉴3</p> -->
+<!-- 				</a> -->
+<!-- 			</li> -->
+<!-- 		</ul> -->
 	</div>
 </div>

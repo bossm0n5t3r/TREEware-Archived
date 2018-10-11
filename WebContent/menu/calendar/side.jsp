@@ -59,19 +59,19 @@
 			</div>
 		</div>
 		<ul class="nav">
-			<li id="menu3" class="nav-item">
-				<a href="${root}/menu/calendar/m_register.jsp">
-					<p>일정등록</p>
-				</a>
-			</li>
 			<li id="menu1" class="nav-item active">
 				<a href="${root}/menu/calendar/main.jsp">
 					<p>전체일정</p>
 				</a>
 			</li>
+<!-- 			<li id="menu3" class="nav-item"> -->
+<%-- 				<a href="${root}/menu/calendar/m_register.jsp"> --%>
+<!-- 					<p>일정등록</p> -->
+<!-- 				</a> -->
+<!-- 			</li> -->
 			<li id="menu2" class="nav-item">
-				<a href="${root}/menu/calendar/m_private.jsp">
-					<p>개인일정</p>
+				<a href="${root}/menu/calendar/todo.jsp">
+					<p>TO DO</p>
 				</a>
 			</li>
 		</ul>
