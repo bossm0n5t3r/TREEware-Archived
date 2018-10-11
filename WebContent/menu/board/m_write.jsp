@@ -18,8 +18,9 @@
 						<select id="" name="category" class="form-control" style="width:100%;font-size:100%;height:45px">
 							<option value='0'>[자유게시판] 일반게시글</option>
 							<option value='1'>[자유게시판] 정보공유</option>
-							<option value='2'>[자유게시판] 건의사항</option>
-							<option value='3'>[자유게시판] 칭찬합니다</option>
+							<option value='2'>[자유게시판] Q&A</option>
+							<option value='3'>[자유게시판] 건의사항</option>
+							<option value='4'>[자유게시판] 칭찬합니다</option>
 						</select>
 						<input name="title" type="text" class="form-control" id="title" placeholder="제목을 입력하세요" style="height:45px">
 						<textarea name="contents" id="contents" rows="20" style="width:100%;margin:10px 0"></textarea>

@@ -11,6 +11,7 @@ $(document).ready(function(){
 	document.getElementById("menu2").setAttribute("class", "nav-item");
 	document.getElementById("menu3").setAttribute("class", "nav-item active");
 });
+
 </script>
 </head>
 <body>
