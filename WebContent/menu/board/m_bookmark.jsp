@@ -7,9 +7,9 @@
 <%@ include file="/menu/board/import.jsp" %>
 <script>
 $(document).ready(function(){
-	document.getElementById("menu1").setAttribute("class", "nav-item active");
+	document.getElementById("menu1").setAttribute("class", "nav-item");
 	document.getElementById("menu2").setAttribute("class", "nav-item");
-	document.getElementById("menu3").setAttribute("class", "nav-item");
+	document.getElementById("menu3").setAttribute("class", "nav-item active");
 });
 </script>
 </head>
@@ -23,7 +23,7 @@ $(document).ready(function(){
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<div class="card-title">오피스소식</div>
+								<div class="card-title">북마크함</div>
 							</div>
 							<div class="card-body">
 								<div class="row" align="center">
@@ -95,7 +95,7 @@ $(document).ready(function(){
 														<td>손예진</td>
 														<td>18.10.02</td>
 														<td>234</td>
-														<td><a href="#">추가</a></td>
+														<td><a href="#">삭제</a></td>
 													</tr>
 													<%} %>
 												</tbody>

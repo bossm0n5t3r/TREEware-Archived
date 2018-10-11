@@ -59,3 +59,36 @@
 		<%} %>
 	</tbody>
 </table>
+<div class="clear"></div>
+<div align="center">
+	<table style="width:230px">
+		<tr>
+			<td colspan="2">
+				<ul class="pagination pg-default pg-small">
+					<li class="page-item">
+						<a class="page-link" href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+							<span class="sr-only">Previous</span>
+						</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">4</a></li>
+					<li class="page-item"><a class="page-link" href="#">5</a></li>
+					<li class="page-item">
+						<a class="page-link" href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+							<span class="sr-only">Next</span>
+						</a>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr><td colspan="2"></td></tr>
+		<tr>
+			<td><input type="text" style="width:100%"></td>
+			<td><input type="button" value="검색" style="font-size:70%;padding:5px 10px"></td>
+		</tr>
+	</table>
+</div>

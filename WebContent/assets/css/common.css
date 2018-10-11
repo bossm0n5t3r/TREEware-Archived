@@ -39,6 +39,22 @@
 	color:#444;
 	font-size:90%;
 }
+.simplebtn2{
+	padding:7px 13px;
+	border-radius:5px;
+	border:1px #ccc solid;
+	color:#fff;
+	background-color:#007bff;
+	font-size:90%;
+}
+.simplebtn2:hover{
+	padding:7px 13px;
+	border-radius:5px;
+	border:1px #ccc solid;
+	background-color:#007fff;
+	color:#fff;
+	font-size:90%;
+}
 #info input{
 
 height:50px;

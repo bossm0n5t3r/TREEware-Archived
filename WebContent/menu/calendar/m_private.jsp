@@ -7,8 +7,8 @@
 <%@ include file="/menu/calendar/import.jsp" %>
 <script>
 $(document).ready(function(){
-	document.getElementById("menu1").setAttribute("class", "nav-item active");
-	document.getElementById("menu2").setAttribute("class", "nav-item");
+	document.getElementById("menu1").setAttribute("class", "nav-item");
+	document.getElementById("menu2").setAttribute("class", "nav-item active");
 	document.getElementById("menu3").setAttribute("class", "nav-item");
 });
 </script>
@@ -22,12 +22,7 @@ $(document).ready(function(){
 					<div class="container-fluid" style="height:1100px">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="card" align="center">
-									<div class="card-header">
-										<div class="card-title" align="left">일정</div>
-									</div>
 									<div id="calendar"></div>
-								</div>
 							</div>
 						</div>
 					</div>

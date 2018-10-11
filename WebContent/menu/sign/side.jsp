@@ -24,17 +24,17 @@
 			</div>
 		</div>
 		<ul class="nav">
-			<li class="nav-item">
+			<li id="menu1" class="nav-item">
 				<a href="${root}/menu/sign/write.jsp">
 					<p>새결재진행</p>
 				</a>
 			</li>
-			<li class="nav-item active">
+			<li id="menu2" class="nav-item active">
 				<a href="${root}/menu/sign/main.jsp">
 					<p>나의결재함</p>
 				</a>
 			</li>
-			<li class="nav-item">
+			<li id="menu3" class="nav-item">
 				<a href="${root}/menu/sign/dept.jsp">
 					<p>부서결재함</p>
 				</a>

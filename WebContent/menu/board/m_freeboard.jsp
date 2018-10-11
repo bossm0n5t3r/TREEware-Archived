@@ -7,8 +7,8 @@
 <%@ include file="/menu/board/import.jsp" %>
 <script>
 $(document).ready(function(){
-	document.getElementById("menu1").setAttribute("class", "nav-item active");
-	document.getElementById("menu2").setAttribute("class", "nav-item");
+	document.getElementById("menu1").setAttribute("class", "nav-item");
+	document.getElementById("menu2").setAttribute("class", "nav-item active");
 	document.getElementById("menu3").setAttribute("class", "nav-item");
 });
 </script>
@@ -23,7 +23,7 @@ $(document).ready(function(){
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<div class="card-title">오피스소식</div>
+								<div class="card-title">자유게시판</div>
 							</div>
 							<div class="card-body">
 								<div class="row" align="center">
@@ -32,10 +32,10 @@ $(document).ready(function(){
 										<!-- 글목록 시작  -->
 											<div class="buttonmenu" align="center" style="margin:5px 0 5px 0">
 												<div class="row" style="width:100%">
-													<div style="width:65%;text-align:left;padding:10px">
+													<div style="width:50%;text-align:left;padding:10px">
 														<p style="color:#007bff">전체목록 [123개]</p>
 													</div>
-													<div style="width:35%;text-align:right">
+													<div style="width:50%;text-align:right">
 														<div class="row" style="float:right">
 															<table>
 																<tr>
@@ -52,7 +52,8 @@ $(document).ready(function(){
 																		<input type="text" style="width:100%;width:150px;height:30px">
 																	</td>
 																	<td>
-																		<button class="simplebtn1" style="width:60px;height:30px">검색</button>
+																		<button class="simplebtn1" style="width:70px;height:30px">검색</button>
+																		<button class="simplebtn2" style="width:70px;height:30px">글쓰기</button>
 																	</td>
 																</tr>
 															</table>

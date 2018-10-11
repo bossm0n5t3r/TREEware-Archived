@@ -6,6 +6,13 @@
 <%@ include file="/common/import.jsp" %>
 <%@ include file="/menu/sign/import.jsp" %>
 <script type="text/javascript" src="${root}/assets/js/plugin/jquery-ztree/forms_ztree.js"></script>
+<script>
+$(document).ready(function(){
+	document.getElementById("menu1").setAttribute("class", "nav-item active");
+	document.getElementById("menu2").setAttribute("class", "nav-item");
+	document.getElementById("menu3").setAttribute("class", "nav-item");
+});
+</script>
 </head>
 <body>
 <%@ include file="/common/top.jsp" %>
