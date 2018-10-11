@@ -7,7 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%@ include file="/common/import.jsp" %>
 <script src="${root}/assets/js/register.js"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>	
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>	
 </head>
 <body>
 	<div class="wrapper">
@@ -108,8 +111,8 @@
 															<div style="width:15%" class="box-group">
 																<select id="gender" name="gender" class="form-control" style="font-size:100%" style="border:#007fff 1px solid;">
 																	<option value='0' disabled>성별선택</option>
-																	<option value='1'>남성</option>
-																	<option value='2'>여성</option>
+																	<option value='M'>남성</option>
+																	<option value='F'>여성</option>
 																</select>
 															</div>
 															<div style="width:15%" class="box-group">
