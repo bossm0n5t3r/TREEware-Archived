@@ -1,6 +1,9 @@
 -- !!! 집에서 확인작업 바람 !!!
 
 -- 부서 (DPT)
+-- 부서 검색
+SELECT DPT_SQ, DPT_NM
+FROM DPT
 -- 부서 추가
 INSERT INTO DPT(DPT_SQ, DPT_NM)
 VALUES(#{DPT_SQ},#{DPT_NM})
@@ -15,6 +18,9 @@ WHERE DPT_SQ = #{dpt_sq}
 
 
 -- 직위 (RNK)
+-- 직위 검색
+SELECT RNK_SQ, RNK_NM
+FROM RNK
 -- 직위 추가
 INSERT INTO RNK(RNK_SQ, RNK_NM)
 VALUES(#{RNK_SQ},#{RNK_NM})
@@ -29,6 +35,9 @@ WHERE RNK_SQ = #{rnk_sq}
 
 
 -- 직책 (PST)
+-- 직책 검색
+SELECT PST_SQ, PST_NM
+FROM PST
 -- 직책 추가
 INSERT INTO PST(PST_SQ, PST_NM)
 VALUES(#{PST_SQ},#{PST_NM})
@@ -39,4 +48,3 @@ WHERE PST_SQ = #{pst_sq}
 -- 직책 삭제
 DELETE FROM PST
 WHERE PST_SQ = #{pst_sq}
-
