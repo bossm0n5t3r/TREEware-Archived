@@ -99,12 +99,12 @@
 				</a>
 			</li>
 			<li id="menu2" class="nav-item">
-				<a href="${root}/menu/board/m_freeboard.jsp">
+				<a href="${root}/menu/board/freeboard.jsp">
 					<p>자유게시판</p>
 				</a>
 			</li>
 			<li id="menu3" class="nav-item">
-				<a href="${root}/menu/board/m_bookmark.jsp">
+				<a href="${root}/menu/board/bookmark.jsp">
 					<p>북마크함</p>
 				</a>
 			</li>

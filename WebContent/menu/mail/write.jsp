@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/menu/board/import.jsp" %>
+<%@ include file="/menu/board/import/import.jsp" %>
 <link href="${root}/assets/js/plugin/summernote/summernote.css" rel="stylesheet">
 <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.10/summernote.css" rel="stylesheet"> -->
 <script src="${root}/assets/js/plugin/summernote/summernote.js"></script>
@@ -23,7 +23,7 @@ $(document).ready(function() {
 <body>
    <div class="wrapper">
       <%@ include file="/common/top.jsp" %>
-      <%@ include file="side.jsp" %>
+      <%@ include file="import/side.jsp" %>
       <div class="main-panel">
          <div class="content">
             <div class="card">

@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/menu/board/import.jsp" %>
+<%@ include file="/menu/board/import/import.jsp" %>
 <script>
 $(document).ready(function(){
 	document.getElementById("menu1").setAttribute("class", "nav-item active");
@@ -17,7 +17,7 @@ $(document).ready(function(){
 <body>
 	<div class="wrapper">
 		<%@ include file="/common/top.jsp" %>
-		<%@ include file="side.jsp" %>
+		<%@ include file="import/side.jsp" %>
 		<div class="main-panel">
 			<div class="content">
 				<div class="container-fluid">

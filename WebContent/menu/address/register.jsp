@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/menu/address/import.jsp" %>
+<%@ include file="/menu/address/import/import.jsp" %>
 <script type="text/javascript" src="${root}/assets/js/plugin/jquery-ztree/dept_ztree.js"></script>
 <script>
 $(document).ready(function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
 </head>
 <body>
 <%@ include file="/common/top.jsp" %>
-<%@ include file="side.jsp" %>
+<%@ include file="import/side.jsp" %>
 <div class="main-panel">
 	<div class="content">
 		<div class="container-fluid">

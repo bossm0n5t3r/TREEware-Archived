@@ -30,22 +30,22 @@
 				</a>
 			</li>
 			<li id="menu2" class="nav-item active">
-				<a href="${root}/menu/address/m_inside.jsp">
+				<a href="${root}/menu/address/inside.jsp">
 					<p>내부연락망</p>
 				</a>
 			</li>
 			<li id="menu3" class="nav-item">
-				<a href="${root}/menu/address/m_outside.jsp">
+				<a href="${root}/menu/address/outside.jsp">
 					<p>외부연락망</p>
 				</a>
 			</li>
 			<li id="menu4" class="nav-item">
-				<a href="${root}/menu/address/m_register.jsp">
+				<a href="${root}/menu/address/register.jsp">
 					<p>등록하기</p>
 				</a>
 			</li>
 			<li id="menu5" class="nav-item">
-				<a href="${root}/menu/address/m_bookmark.jsp">
+				<a href="${root}/menu/address/bookmark.jsp">
 					<p>즐겨찾기</p>
 				</a>
 			</li>

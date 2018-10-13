@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@ include file="/common/import.jsp" %>
-<%@ include file="/menu/address/import.jsp" %>
+<%@ include file="/menu/address/import/import.jsp" %>
 <script type="text/javascript" src="${root}/assets/js/plugin/jquery-ztree/dept_ztree.js"></script>
 <script>
 $(document).ready(function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
 </head>
 <body>
 <%@ include file="/common/top.jsp" %>
-<%@ include file="side.jsp" %>
+<%@ include file="import/side.jsp" %>
 <div class="main-panel">
 	<div class="content">
 		<div class="container-fluid">
@@ -44,7 +44,7 @@ $(document).ready(function(){
 								</div>
 								<div class="col-md-9" style="padding:0 40px 0px 20px ">
 								<!-- 주소록 콘텐츠 페이지  -->
-								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="list.jsp"></IFRAME>
+								<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING="no" width=100% height=100% SRC="import/list.jsp"></IFRAME>
 								<!-- 주소록 콘텐츠 끝 -->
 								<br><br><br>
 									<div class="clear"></div>

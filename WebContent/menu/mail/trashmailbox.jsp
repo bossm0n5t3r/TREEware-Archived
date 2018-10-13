@@ -41,7 +41,7 @@ $(function(){
 	<!-- 			https://www.w3schools.com/bootstrap4/bootstrap_navs.asp -->
 	<div class="wrapper">
 		<%@ include file="/common/top.jsp"%>
-		<%@ include file="side.jsp"%>
+		<%@ include file="import/side.jsp"%>
 		<div class="main-panel">
 			<div class="content">
 				<div class="container-fluid">
